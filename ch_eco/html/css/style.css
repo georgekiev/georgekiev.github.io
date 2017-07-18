@@ -1,0 +1,3250 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	outline: none;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {border-collapse: collapse;border-spacing: 0;}
+input[type="submit"], button {cursor: pointer;}
+input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner {padding: 0;border: 0;}
+
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf')  format('truetype'), url('../fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Semibold.eot?#iefix') format('embedded-opentype'),  url('../fonts/MyriadPro-Semibold.woff') format('woff'), url('../fonts/MyriadPro-Semibold.ttf')  format('truetype'), url('../fonts/MyriadPro-Semibold.svg#MyriadPro-Semibold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+html, body {
+	height: 100%;
+}
+
+body {
+	min-width: 980px;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	background-color: #F7F8F9;
+}
+
+
+/* Preloader */
+.lock {
+	overflow: hidden;
+}
+
+.center .item__1 .main_slider__sprite {
+
+}
+@keyframes preloader_bg {
+    0% {
+		-webkit-transform: scale(1);
+		   -moz-transform: scale(1);
+		    -ms-transform: scale(1);
+		     -o-transform: scale(1);
+		        transform: scale(1);
+    }
+
+    100% {
+    	-webkit-transform: scale(1.5);
+    	   -moz-transform: scale(1.5);
+    	    -ms-transform: scale(1.5);
+    	     -o-transform: scale(1.5);
+    	        transform: scale(1.5);
+    }
+}
+
+@-webkit-keyframes preloader_bg {
+    0% {
+		-webkit-transform: scale(1);
+		   -moz-transform: scale(1);
+		    -ms-transform: scale(1);
+		     -o-transform: scale(1);
+		        transform: scale(1);
+    }
+
+    100% {
+    	-webkit-transform: scale(1.5);
+    	   -moz-transform: scale(1.5);
+    	    -ms-transform: scale(1.5);
+    	     -o-transform: scale(1.5);
+    	        transform: scale(1.5);
+    }
+}
+
+
+.preloader {
+	z-index: 100000;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.preloader__bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background: #8ad2e5 url(../images/bg-preloader.jpg) center top no-repeat;
+
+	-webkit-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	background-size: 100% auto;
+}
+
+.preloader--animated .preloader__bg {
+	animation: preloader_bg 30s both;
+    -webkit-animation: preloader_bg 30s both;
+}
+
+.preloader__logo {
+	z-index: 2;
+	position: absolute;
+	top: 35%;
+	left: 22px;
+	right: 0;
+}
+
+.preloader__logo img {
+	display: block;
+	width: 239px;
+	height: 104px;
+	margin: 0 auto;
+}
+
+.preloader__in {
+	z-index: 2;
+	position: absolute;
+	top: 40%;
+	right: 0;
+	left: 0;
+
+	width: 100%;
+	height: 50px;
+	margin: 104px 0 0 0;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	text-align: center;
+}
+
+.preloader__status {
+	font: bold 28px/100% "Myriad Pro", Arial;
+	color: #E31D1A;
+
+}
+
+/* Globals */
+.disable-hover {
+	pointer-events: none;
+}
+
+.blue-bg {
+	background: #91D2E7 url(../images/bg-blue_radial.jpg) center 88px no-repeat;
+}
+
+.container {
+	min-height: 100%;
+	padding: 88px 0 0 0;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.container .push {
+	clear: both;
+	height: 210px;
+}
+
+.wrap {
+	width: 980px;
+	margin: 0 auto;
+}
+
+
+/* Share */
+.share_counters {}
+
+.share__fb {
+	opacity: 0.92;
+	display: inline-block;
+	width: 34px;
+	height: 24px;
+	padding: 0 0 0 37px;
+
+	-webkit-transition: opacity 150ms ease-in-out;
+	   -moz-transition: opacity 150ms ease-in-out;
+	    -ms-transition: opacity 150ms ease-in-out;
+	     -o-transition: opacity 150ms ease-in-out;
+	        transition: opacity 150ms ease-in-out;
+
+	background: url(../images/icons-share.png) left center no-repeat;
+
+	font: bold 14px/26px "Myriad Pro", Arial;
+	color: #A3A3A3;
+	text-align: center;
+	cursor: pointer;
+}
+.share__fb:hover {opacity: 1;}
+
+.share__vk {
+	opacity: 0.92;
+	display: inline-block;
+	width: 34px;
+	height: 24px;
+	padding: 0 0 0 37px;
+
+	-webkit-transition: opacity 150ms ease-in-out;
+	   -moz-transition: opacity 150ms ease-in-out;
+	    -ms-transition: opacity 150ms ease-in-out;
+	     -o-transition: opacity 150ms ease-in-out;
+	        transition: opacity 150ms ease-in-out;
+
+	background: url(../images/icons-share.png) right center no-repeat;
+
+	font: bold 14px/26px "Myriad Pro", Arial;
+	color: #A3A3A3;
+	text-align: center;
+	cursor: pointer;
+}
+.share__vk:hover {opacity: 1;}
+
+
+/* Pagination */
+.pagination {
+	margin: 0 0 25px 0;
+
+	text-align: center;
+}
+
+.pagination ul {
+	list-style: none;
+}
+
+.pagination ul li {
+	display: inline-block;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #E0E7E9;
+	vertical-align: middle;
+}
+
+.pagination ul li a {
+	display: inline-block;
+	padding: 0 9px;
+
+	-webkit-transition: color 150ms ease;
+	   -moz-transition: color 150ms ease;
+	    -ms-transition: color 150ms ease;
+	     -o-transition: color 150ms ease;
+	        transition: color 150ms ease;
+
+	color: #8E9D9E;
+	text-decoration: none;
+}
+
+.pagination ul li a:hover {
+	color: #3a3a3a;
+}
+
+.pagination ul li.current a {
+	font-weight: bold;
+	color: #3A3A3A;
+}
+
+.pagination ul li.prev {
+	margin-right: 5px;
+}
+.pagination ul li.prev a {
+	opacity: 0.5;
+
+	width: 19px;
+	height: 15px;
+	padding: 0;
+
+	background: url(../images/ico-pgn-l.png) center center no-repeat;
+
+	text-indent: -9999px;
+}
+.pagination ul li.prev a:hover {
+	opacity: 1;
+}
+
+.pagination ul li.next {
+	margin-left: 5px;
+}
+.pagination ul li.next a {
+	opacity: 0.5;
+
+	width: 19px;
+	height: 15px;
+	padding: 0;
+
+	background: url(../images/ico-pgn-r.png) center center no-repeat;
+
+	text-indent: -9999px;
+}
+.pagination ul li.next a:hover {
+	opacity: 1;
+}
+
+
+/* Txts */
+.page-title {
+	display: block;
+	margin: 0 0 32px 0;
+	padding: 0 0 26px 0;
+
+	background: url(../images/bg-pp-line.png) center bottom no-repeat;
+
+	font: bold 30px/100% "Myriad Pro", Arial;
+	color: #2B2B2B;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.page-title p {
+	display: block;
+	margin: 5px 0 0 0;
+
+	font-weight: normal;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #8E9D9E;
+}
+
+.txt_ecobud {
+	display: block;
+	width: 759px;
+	height: 55px;
+	margin: 50px auto 30px auto;
+
+	background: url(../images/txt-ecobud.png) no-repeat;
+
+	text-indent: -9999px;
+}
+
+.txt_prize {
+	display: block;
+	width: 642px;
+	height: 61px;
+	margin: 72px auto 60px auto;
+
+	background: url(../images/txt-prize.png) no-repeat;
+
+	text-indent: -9999px;
+}
+
+
+/* Avatars */
+.avatar-min {
+	position: relative;
+
+	overflow: hidden;
+	width: 53px;
+	height: 61px;
+}
+
+.avatar-min:after {
+	content: ' ';
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	background: url(../images/ico-mask_ava-min.png);
+}
+
+.avatar-min-w:after {background: url(../images/ico-mask_ava-min-w.png);}
+
+.avatar-min img {
+	display: block;
+	margin: 5px auto 0 auto;
+}
+
+
+.avatar-big {
+	position: relative;
+
+	overflow: hidden;
+	width: 193px;
+	height: 204px;
+}
+
+.avatar-big:after {
+	content: ' ';
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	background: url(../images/ico-mask_ava-big-w.png);
+}
+
+.avatar-big img {
+	display: block;
+	margin: 5px auto 0 auto;
+}
+
+
+/* Forms */
+.inp-style {
+	outline: none;
+
+	display: inline-block;
+	height: 38px;
+	border: 1px solid #e1e1e1;
+	padding: 0 15px;
+
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+
+	-webkit-transition: all 150ms ease-in-out;
+	   -moz-transition: all 150ms ease-in-out;
+	    -ms-transition: all 150ms ease-in-out;
+	     -o-transition: all 150ms ease-in-out;
+	        transition: all 150ms ease-in-out;
+
+	background-color: #F7F7F7;
+
+	font: normal 14px/140% "Myriad Pro", Arial;
+	color: #919FA0;
+	vertical-align: middle;
+}
+
+.inp-style:hover {
+	background-color: #fff;
+}
+.inp-style:focus {
+	background-color: #fff;
+}
+
+.inp-error {
+	border-color: #E31D1A!important;
+}
+
+p.inp-error {
+	font: normal 12px/100% "Myriad Pro", Arial;
+	color: #E31D1A;
+	text-align: center;
+}
+
+/* Btns */
+.btn {
+	outline: none;
+
+	display: inline-block;
+	height: 51px;
+	border: 0;
+	padding: 0 30px;
+
+	background-color: #919fa0;
+
+	-webkit-transition: background-color 150ms ease-in-out;
+	   -moz-transition: background-color 150ms ease-in-out;
+	    -ms-transition: background-color 150ms ease-in-out;
+	     -o-transition: background-color 150ms ease-in-out;
+	        transition: background-color 150ms ease-in-out;
+
+	font: normal 16px/52px "Myriad Pro", Arial;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.btn:hover {background-color: #8A9596;}
+
+.btn-green {
+	background-color: #009639;
+}
+.btn-green:hover {
+	background-color: #008432;
+}
+
+
+/* Header */
+.top {
+	z-index: 1001;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+
+	min-width: 980px;
+	height: 88px;
+
+	box-shadow: 0px 0px 5.76px 0.24px rgba(0, 0, 0, 0.13);
+	background-color: #fff;
+
+	text-align: center;
+
+	-webkit-backface-visibility: hidden;
+   	backface-visibility: hidden;
+}
+
+.top__logo {
+	position: relative;
+
+	display: inline-block;
+	width: 239px;
+	height: 88px;
+	margin: 0 26px;
+
+	vertical-align: middle;
+}
+
+.top__logo a {
+	position: absolute;
+	top: 10px;
+
+	display: block;
+	width: 239px;
+	height: 104px;
+}
+
+.top__logo img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.top__nav {
+	display: inline-block;
+	margin: 5px 0 0 0;
+
+	vertical-align: middle;
+}
+
+.top__nav ul {
+	list-style: none;
+}
+
+.top__nav ul li {
+	display: inline-block;
+	margin: 0 27px;
+}
+
+.top__nav ul li a {
+	-webkit-transition: color 150ms ease;
+	   -moz-transition: color 150ms ease;
+	    -ms-transition: color 150ms ease;
+	     -o-transition: color 150ms ease;
+	        transition: color 150ms ease;
+
+	font: 600 18px/100% "Myriad Pro", Arial;
+	color: #2B2B2B;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.top__nav ul li a:hover {
+	color: #E7000D;
+}
+
+
+/* Main slider */
+.main_slider {
+	position: relative;
+
+	overflow: hidden;
+	height: 605px;
+
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+
+	background: #91D2E7 url(../images/bg-slider.jpg) center top no-repeat;
+}
+
+.main_slider__list {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.main_slider__prev {
+	z-index: 50;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+
+	width: 30%;
+	height: 100%;
+
+	cursor: pointer;
+}
+
+.main_slider__next {
+	z-index: 50;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	width: 30%;
+	height: 100%;
+
+	cursor: pointer;
+}
+
+.main_slider .wrap {
+	z-index: 55;
+	position: relative;
+}
+
+.main_slider__info {
+	position: absolute;
+	top: 150px;
+	right: 0;
+
+	width: 365px;
+
+	background-color: #FFF;
+}
+
+.main_slider__info .region {
+	padding: 35px 20px 32px 30px;
+
+	font: normal 24px/100% "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.main_slider__info .bt {
+	overflow: hidden;
+}
+
+.main_slider__info .stats {
+	float: left;
+
+	display: table;
+	width: 165px;
+	height: 59px;
+	border-top: 1px solid #F1F2F2;
+	padding: 0 0 0 30px;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #8D9E93;
+}
+
+.main_slider__info .stats__in {
+	display: table-cell;
+
+	vertical-align: middle;
+}
+
+.main_slider__info .stats a {
+	color: #e31d1a;
+	text-decoration: underline;
+}
+
+.main_slider__info .stats a:hover {}
+
+.main_slider__info .stats .added {
+	margin: 4px 0 3px 0;
+}
+
+.main_slider__info .stats .moder {
+	font-size: 11px;
+}
+
+.main_slider__info .btns {
+	overflow: hidden;
+}
+
+.main_slider__info .btns a {
+	display: block;
+	padding: 22px 0;
+
+	background-color: #E31D1A;
+
+	-webkit-transition: background-color 100ms ease;
+	   -moz-transition: background-color 100ms ease;
+	    -ms-transition: background-color 100ms ease;
+	     -o-transition: background-color 100ms ease;
+	        transition: background-color 100ms ease;
+
+	font: normal 16px/100% "Myriad Pro", Arial;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.main_slider__info .btns a:hover {background-color: #c51917;}
+
+.main_slider .item {
+	position: relative;
+	top: 110px;
+
+	overflow: hidden;
+	width: 640px;
+
+	-webkit-transition: all 200ms ease-in-out;
+	   -moz-transition: all 200ms ease-in-out;
+	    -ms-transition: all 200ms ease-in-out;
+	     -o-transition: all 200ms ease-in-out;
+	        transition: all 200ms ease-in-out;
+
+	-webkit-transform: scale(0.7);
+	   -moz-transform: scale(0.7);
+	    -ms-transform: scale(0.7);
+	     -o-transform: scale(0.7);
+	        transform: scale(0.7);
+}
+
+@media (min-width: 1180px) {
+	.main_slider .item {
+		width: 740px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.main_slider .item {
+		width: 840px;
+	}
+}
+
+/*.owl-item {}
+.owl-item.active-before {}
+.owl-item.active-after {}*/
+
+.main_slider .center .item {
+	top: 20px;
+
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+	        transform: scale(1);
+}
+
+
+/*  */
+.main_slider__bg {
+	position: relative;
+	width: 596px;
+	height: 435px;
+	margin: 0 auto;
+}
+
+.main_slider__sprite {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 435px;
+
+    text-indent: -9999px;
+}
+
+@keyframes sprite4768 {
+    100% {background-position: -4768px 0;}
+}
+@-webkit-keyframes sprite4768 {
+    100% {background-position: -4768px 0;}
+}
+
+
+
+/* 1 Poltava */
+.item__1 .main_slider__bg {
+	width: 614px;
+
+	background: url(../images/slide1-bg.png) no-repeat;
+}
+
+.item__1 .main_slider__sprite {
+    background: url(../images/slide1-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__1 .main_slider__sprite {
+    animation: sprite1 4s steps(8) infinite;
+    -webkit-animation: sprite1 4s steps(8) infinite;
+}
+@keyframes sprite1 {
+    100% {background-position: -4908px 0;}
+}
+@-webkit-keyframes sprite1 {
+    100% {background-position: -4908px 0;}
+}
+
+
+
+/* 2 Chernivtsi */
+.item__2 .main_slider__bg {
+	background: url(../images/slide2-bg.png) no-repeat;
+}
+
+.item__2 .main_slider__sprite {
+    background: url(../images/slide2-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__2 .main_slider__sprite {
+    animation: sprite2 3s steps(7) alternate-reverse infinite;
+    -webkit-animation: sprite2 3s steps(7) alternate-reverse infinite;
+}
+
+@keyframes sprite2 {
+    100% {background-position: -4171px 0;}
+}
+@-webkit-keyframes sprite2 {
+    100% {background-position: -4171px 0;}
+}
+
+
+
+/* 3 Chernihiv */
+.item__3 .main_slider__bg {
+	background: url(../images/slide3-bg.png) no-repeat;
+}
+
+.item__3 .main_slider__sprite {
+    background: url(../images/slide3-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__3 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 4 Dnepropetrovsk */
+.item__4 .main_slider__sprite {
+    background: url(../images/slide4-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__4 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 5 Ivano-Frankovsk */
+.item__5 .main_slider__bg {
+	background: url(../images/slide5-bg.png) no-repeat;
+}
+
+.item__5 .main_slider__sprite {
+    background: url(../images/slide5-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__5 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 6 Lugansk */
+.item__6 .main_slider__bg {
+	background: url(../images/slide6-bg.png) no-repeat;
+}
+
+.item__6 .main_slider__sprite {
+    background: url(../images/slide6-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__6 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 7 Mykolaiv */
+.item__7 .main_slider__sprite {
+    background: url(../images/slide7-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__7 .main_slider__sprite {
+    animation: sprite7 1.5s steps(4) alternate-reverse infinite;
+    -webkit-animation: sprite7 1.5s steps(4) alternate-reverse infinite;
+}
+
+@keyframes sprite7 {
+    100% {background-position: -2384px 0;}
+}
+@-webkit-keyframes sprite7 {
+    100% {background-position: -2384px 0;}
+}
+
+
+
+/* 8 Rovno */
+.item__8 .main_slider__bg {
+	background: url(../images/slide8-bg.png) no-repeat;
+}
+
+.item__8 .main_slider__sprite {
+    background: url(../images/slide8-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__8 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 9 Ternopil */
+.item__9 .main_slider__sprite {
+    background: url(../images/slide9-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__9 .main_slider__sprite {
+    animation: sprite9 3s steps(10) infinite;
+    -webkit-animation: sprite9 3s steps(10) infinite;
+}
+
+@keyframes sprite9 {
+    100% {background-position: -5960px 0;}
+}
+@-webkit-keyframes sprite9 {
+    100% {background-position: -5960px 0;}
+}
+
+
+
+/* 10 Volyn */
+.item__10 .main_slider__sprite {
+    background: url(../images/slide10-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__10 .main_slider__sprite {
+    animation: sprite10 3s steps(4) alternate-reverse infinite;
+    -webkit-animation: sprite10 3s steps(4) alternate-reverse infinite;
+}
+
+@keyframes sprite10 {
+    100% {background-position: -2384px 0;}
+}
+@-webkit-keyframes sprite10 {
+    100% {background-position: -2384px 0;}
+}
+
+
+
+/* 11 Zakarpatie */
+.item__11 .main_slider__bg {
+	background: url(../images/slide11-bg.png) no-repeat;
+}
+
+.item__11 .main_slider__sprite {
+    background: url(../images/slide11-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__11 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 12 Zaporizhzha */
+.item__12 .main_slider__sprite {
+    background: url(../images/slide12-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__12 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) alternate-reverse infinite;
+    -webkit-animation: sprite4768 3s steps(8) alternate-reverse infinite;
+}
+
+
+
+/* 13 Zhytomyr */
+.item__13 .main_slider__sprite {
+    background: url(../images/slide13-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__13 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 14 Cherkassy */
+.item__14 .main_slider__bg {
+	background: url(../images/slide14-bg.png) no-repeat;
+}
+
+.item__14 .main_slider__sprite {
+    background: url(../images/slide14-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__14 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 15 Kharkiv */
+.item__15 .main_slider__sprite {
+    background: url(../images/slide15-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__15 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 16 Kherson */
+.item__16 .main_slider__bg {
+	background: url(../images/slide16-bg.png) no-repeat;
+}
+
+.item__16 .main_slider__sprite {
+    background: url(../images/slide16-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__16 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) alternate-reverse infinite;
+    -webkit-animation: sprite4768 3s steps(8) alternate-reverse infinite;
+}
+
+
+
+/* 17 Khmelnytsk */
+.item__17 .main_slider__bg {
+	background: url(../images/slide17-bg.png) no-repeat;
+}
+
+.item__17 .main_slider__sprite {
+    background: url(../images/slide17-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__17 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 18 Kirovograd */
+.item__18 .main_slider__sprite {
+    background: url(../images/slide18-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__18 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+
+/* 19 Sumy */
+.item__19 .main_slider__sprite {
+    background: url(../images/slide19-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__19 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+/* 20 Odesa */
+.item__20 .main_slider__sprite {
+    background: url(../images/slide20-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__20 .main_slider__sprite {
+    animation: sprite20 3s steps(9) alternate-reverse infinite;
+    -webkit-animation: sprite20 3s steps(9) alternate-reverse infinite;
+}
+
+@keyframes sprite20 {
+    100% {background-position: -5364px 0;}
+}
+@-webkit-keyframes sprite20 {
+    100% {background-position: -5364px 0;}
+}
+
+/* 21 Lviv */
+.item__21 .main_slider__sprite {
+    background: url(../images/slide21-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__21 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+/* 22 Kyiv */
+.item__22 .main_slider__bg {
+	background: url(../images/slide22-bg.png) no-repeat;
+}
+
+.item__22 .main_slider__sprite {
+    background: url(../images/slide22-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__22 .main_slider__sprite {
+    animation: sprite22 3s steps(9) alternate-reverse infinite;
+    -webkit-animation: sprite22 3s steps(9) alternate-reverse infinite;
+}
+
+@keyframes sprite22 {
+    100% {background-position: -5364px 0;}
+}
+@-webkit-keyframes sprite22 {
+    100% {background-position: -5364px 0;}
+}
+
+/* 23 Vinnytsya */
+.item__23 .main_slider__sprite {
+    background: url(../images/slide23-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__23 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) alternate-reverse infinite;
+    -webkit-animation: sprite4768 3s steps(8) alternate-reverse infinite;
+}
+
+/* 24 Donetsk */
+.item__24 .main_slider__sprite {
+    background: url(../images/slide24-sprite.png) 0 0 no-repeat;
+}
+
+.center .item__24 .main_slider__sprite {
+    animation: sprite4768 3s steps(8) infinite;
+    -webkit-animation: sprite4768 3s steps(8) infinite;
+}
+
+
+/* Main steps */
+.main_step {
+	width: 100%;
+	margin: 0 0 80px 0;
+	padding: 60px 0;
+
+	box-shadow: 0px 0px 5.76px 0.24px rgba(0, 0, 0, 0.13);
+	background-color: #fff;
+}
+
+.main_steps {
+	font: normal 20px/24px "Myriad Pro", Arial;
+	color: #343434;
+	text-align: center;
+}
+
+.main_steps__1 {
+	display: inline-block;
+	width: 205px;
+	margin: 0 0 0 50px;
+	padding: 8px 0 8px 60px;
+
+	background: url(../images/ico-step_n1.png) left center no-repeat;
+
+	text-align: left;
+
+	vertical-align: middle;
+}
+
+.main_steps__2 {
+	display: inline-block;
+	width: 195px;
+	padding: 8px 0 8px 60px;
+
+	background: url(../images/ico-step_n2.png) left center no-repeat;
+
+	text-align: left;
+
+	vertical-align: middle;
+}
+
+.main_steps__3 {
+	display: inline-block;
+	width: 170px;
+	padding: 8px 0 8px 60px;
+
+	background: url(../images/ico-step_n3.png) left center no-repeat;
+
+	text-align: left;
+
+	vertical-align: middle;
+}
+
+
+/* Main last projects */
+.main_last_pj {
+	margin: 0 0 75px 0;
+}
+
+.main_last_pj h3 {
+	margin: 0 0 25px 0;
+
+	font: bold 30px/100% "Myriad Pro", Arial;
+	color: #2B2B2B;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.pj__items {}
+
+.pj__item {
+	float: left;
+	width: 240px;
+	margin: 0 0 30px 5px;
+}
+
+.pj__item:first-child {
+	margin-left: 0;
+}
+
+.pj__item a {
+	display: block;
+
+	text-decoration: none;
+}
+
+.pj__item .thumb {
+	position: relative;
+	margin: 0 0 12px 0;
+}
+
+.pj__item .thumb:after {
+	content: ' ';
+
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	display: block;
+	width: 100%;
+	height: 0;
+
+	background-color: #00843E;
+
+	-webkit-transition: height 150ms ease-in-out;
+	   -moz-transition: height 150ms ease-in-out;
+	    -ms-transition: height 150ms ease-in-out;
+	     -o-transition: height 150ms ease-in-out;
+	        transition: height 150ms ease-in-out;
+}
+.pj__item:hover .thumb:after {
+	height: 3px;
+}
+
+.pj__item .thumb img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.pj__item .author {
+	overflow: hidden;
+	margin: 0 0 13px 0;
+}
+
+.pj__item .author .avatar-min {
+	float: left;
+	margin: 0 12px 0 0;
+}
+
+
+.pj__item .author .info {
+	overflow: hidden;
+	margin: 15px 0 0 0;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+}
+
+.pj__item .author .info h5 {
+	color: #2B2B2B;
+}
+
+.pj__item .author .info span {
+	display: block;
+	margin: 5px 0 0 0;
+
+	color: #8E9D9E;
+}
+
+.pj__item .txt {
+	margin: 0 0 10px 0;
+}
+
+.pj__item .txt h4 {
+	margin: 0 0 2px 0;
+
+	font: bold 16px/120% "Myriad Pro", Arial;
+	text-transform: uppercase;
+	color: #3a3a3a;
+}
+
+.pj__item .txt p {
+	font: normal 14px/20px "Myriad Pro", Arial;
+	color: #3a3a3a;
+}
+
+.pj__item .votes {
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #8E9D9E;
+}
+
+.pj__item .votes span {
+	font-weight: bold;
+	font-size: 16px;
+	color: #009639;
+}
+
+.main_last_pj__more {
+	margin: 20px 0 0 0;
+
+	text-align: right;
+}
+
+.main_last_pj__more a {
+	display: inline-block;
+	padding: 3px 0 0 32px;
+
+	background: url(../images/ico-arr_r.png) left center no-repeat;
+
+	-webkit-transition: background-position 150ms ease-in-out;
+	   -moz-transition: background-position 150ms ease-in-out;
+	    -ms-transition: background-position 150ms ease-in-out;
+	     -o-transition: background-position 150ms ease-in-out;
+	        transition: background-position 150ms ease-in-out;
+
+	font: bold 16px/100% "Myriad Pro", Arial;
+	color: #E31D1A;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.main_last_pj__more a:hover {
+	background-position: 5px center;
+}
+
+
+/* List projects */
+.projects_page {}
+
+.projects_page .page-title {
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+
+	background-image: url(../images/bg-pp-line-d.png);
+}
+
+.projects_page__filter {
+	margin: 0 0 30px 0;
+
+	text-align: center;
+}
+
+.projects_page__filter ul {
+	list-style: none;
+}
+
+.projects_page__filter ul li {
+	display: inline-block;
+	margin-right: 5px;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #e0e7e9;
+}
+
+.projects_page__filter ul li span {
+	display: inline-block;
+	margin-right: 5px;
+	color: #8E9D9E;
+
+	-webkit-transition: color 150ms ease;
+	   -moz-transition: color 150ms ease;
+	    -ms-transition: color 150ms ease;
+	     -o-transition: color 150ms ease;
+	        transition: color 150ms ease;
+
+	cursor: pointer;
+}
+
+.projects_page__filter ul li span:hover {
+	color: #2b2b2b;
+}
+
+.projects_page__filter ul li .ico {
+	display: inline-block;
+	width: 9px;
+	height: 6px;
+	margin: 0 5px 0 -2px;
+
+	-webkit-transition: all 200ms ease-in-out;
+	   -moz-transition: all 200ms ease-in-out;
+	    -ms-transition: all 200ms ease-in-out;
+	     -o-transition: all 200ms ease-in-out;
+	        transition: all 200ms ease-in-out;
+
+	background: url(../images/ico-g_bt.png) no-repeat;
+
+	vertical-align: middle;
+}
+
+.projects_page__sub {
+	position: relative;
+
+	cursor: pointer;
+}
+
+.projects_page__sub:hover span {
+	color: #2b2b2b;
+}
+
+.projects_page__sub--active {}
+
+.projects_page__filter .ico--rotate,
+.projects_page__sub--active .ico {
+	-webkit-transform: rotate(-180deg);
+	   -moz-transform: rotate(-180deg);
+	    -ms-transform: rotate(-180deg);
+	     -o-transform: rotate(-180deg);
+	        transform: rotate(-180deg);
+}
+
+.projects_page__dropdown {
+	z-index: 10;
+	position: absolute;
+	top: 26px;
+	left: 50%;
+
+	-ms-overflow-y: scroll;
+	    overflow-y: scroll;
+
+	width: 185px;
+	max-height: 235px;
+	margin: 0 0 0 -110px;
+	padding: 4px 8px 0 8px;
+
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+
+	box-shadow: 0px 0px 5.76px 0.24px rgba(0, 0, 0, 0.13);
+
+	background-color: #fff;
+}
+
+.projects_page__dropdown:before {
+	content: ' ';
+
+	position: absolute;
+	top: -10px;
+	left: 50%;
+
+	display: block;
+	width: 16px;
+	height: 10px;
+	margin: 0 0 0 -8px;
+
+	background: url(../images/ico-f_dd-arr.png) no-repeat;
+
+	text-indent: -9999px;
+}
+
+.projects_page__dropdown ul {
+	list-style: none;
+}
+
+.projects_page__dropdown ul li {
+	display: block;
+
+	border-bottom: 1px solid #F1F3F3;
+
+	text-align: center;
+}
+
+.projects_page__dropdown ul li:last-child {
+	border-bottom: 0;
+}
+
+.projects_page__dropdown ul li a {
+	display: block;
+	padding: 8px 0;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #5C6566;
+	text-decoration: none;
+}
+
+.projects_page__dropdown ul li a:hover {
+	color: #008432;
+}
+
+.projects_page .pagination {
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+
+
+/* Project page */
+.project_page {}
+
+.project_page .page-title {
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+
+	letter-spacing: 1.5px;
+}
+
+.project_page .page-title p {
+	letter-spacing: 0px;
+}
+
+.project_page h3 {
+	margin: 0 0 16px 0;
+
+	font: normal 30px/100% "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.project_page .image {
+	margin: 0 0 45px 0;
+}
+
+.project_page .txt1 {
+	padding: 0 100px;
+
+	text-align: center;
+}
+
+.project_page .txt1 p {
+	margin: 0 0 30px 0;
+
+	font: normal 18px/24px "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.txt_steps {
+	padding: 0 100px;
+
+	text-align: center;
+}
+
+.txt_steps ul {
+	list-style: none;
+}
+
+.txt_steps ul li {
+	margin: 0 0 15px 0;
+	padding: 0 0 25px 0;
+
+	background: url(../images/bg-pp-line.png) center bottom no-repeat;
+}
+
+.txt_steps ul li:last-child {
+	background: none;
+}
+
+.txt_steps .numb {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	margin: 0 0 15px 0;
+
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+
+	background-color: #E8E8E8;
+
+	font: normal 18px/42px "Myriad Pro", Arial;
+	color: #919FA0;
+	text-align: center;
+}
+
+.txt_steps .txt {
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.project_page .txt2 {
+	margin: 0 0 50px 0;
+	padding: 55px 0 40px 0;
+}
+
+.project_page .txt2 p {
+	margin: 0 0 18px 0;
+
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #2b2b2b;
+}
+
+.project_page .txt3 {
+	margin: 0 0 60px 0;
+}
+
+.project_page .txt3 p {
+	margin: 0 0 20px 0;
+
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #2b2b2b;
+}
+
+.project_page .txt3 ul {
+	list-style: none;
+}
+
+.project_page .txt3 ul li {
+	margin: 0 0 5px 0;
+}
+
+.project_page .txt3 ul li a {
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #919FA0;
+}
+
+.project_page .txt3 ul li a:hover {
+	color: #3A3A3A;
+}
+
+.project_page__location {
+	margin: 0 0 20px 0;
+	padding: 60px 0 0 0;
+
+	background: url(../images/ico-place.png) center top no-repeat;
+
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #8E9D9E;
+	text-align: center;
+}
+
+.project_page__location span {
+	display: block;
+	text-transform: uppercase;
+}
+
+.project_page__bt {
+	overflow: hidden;
+	padding: 50px 100px;
+}
+
+.project_page__bt .votes {
+	float: left;
+}
+
+.project_page__bt .votes {
+	font: normal 18px/18px "Myriad Pro", Arial;
+	color: #8e9d9e;
+}
+
+.project_page__bt .votes span {
+	font-weight: bold;
+	font-size: 30px;
+	color: #009639;
+}
+
+.project_page__bt .votes .btn {
+	margin-left: 20px;
+}
+
+.project_page__bt .share {
+	float: right;
+	margin: 10px 0 0 0;
+}
+
+.project_page__bt .share .share__fb {
+	margin-right: 15px;
+}
+
+/* Page */
+.page_box {
+	width: 980px;
+	margin: 0 auto 80px auto;
+	padding: 65px 0 0 0;
+
+	box-shadow: 0px 0px 5.76px 0.24px rgba(0, 0, 0, 0.13);
+
+	background-color: #fff;
+}
+
+.page_box__wrap {
+	padding: 0 100px;
+}
+
+.page_box__wrap--grey {
+	background-color: #F7F8F9;
+}
+
+.page_box__txt {
+	margin-bottom: 55px;
+}
+
+.page_box__txt h4 {
+	margin: 0 0 13px 0;
+
+	font: normal 18px/24px "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.page_box__txt p {
+	margin: 0 0 15px 0;
+
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #919FA0;
+}
+
+
+/* Prize page */
+.prize_page {}
+
+.prize_page .txt {
+	margin: 0 0 55px 0;
+	padding: 0 100px 40px 100px;
+
+	background: url(../images/bg-pp-line.png) center bottom no-repeat;
+
+	text-align: center;
+}
+
+.prize_page p {
+	margin: 0 0 30px 0;
+
+	font: normal 18px/24px "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.prize_page h5 {
+	margin: 0 0 25px 0;
+
+	font: normal 18px/100% "Myriad Pro", Arial;
+	color: #C8C8C8;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.prize_page__counter {
+	width: 498px;
+	height: 96px;
+	padding: 0 0 0 22px;
+	margin: 0 auto 30px auto;
+
+	background: url(../images/bg-count.png) no-repeat;
+
+	font: normal 83px/113px "Myriad Pro", Arial;
+	color: #009639;
+	letter-spacing: 30px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.prize_page__counter .zero {
+	color: #EFEFEF;
+}
+
+.prize_page .main_steps {
+	margin: 0 0 60px 0;
+	padding: 0 0 60px 0;
+
+	background: url(../images/bg-pp-line.png) center bottom no-repeat;
+}
+
+.prize_page .btns {
+	padding: 0 0 95px 0;
+
+	text-align: center;
+}
+
+.prize_page .btns .btn {
+	width: 140px;
+	margin: 0 3px;
+
+	vertical-align: top;
+}
+
+
+/* Project page */
+.author_box {
+	margin: 0 0 20px 0;
+
+	text-align: center;
+}
+
+.author_box a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.author_box .avatar-min {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.author_box p {
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+
+/* Register page */
+.register_page {}
+
+.register_page .page-title {
+	padding-bottom: 0;
+	background: none;
+}
+
+.register_page h3 {
+	margin: 0 0 20px 0;
+	padding: 30px 0 0 0;
+
+	background: url(../images/bg-pp-line.png) center top no-repeat;
+
+	font: normal 18px/24px "Myriad Pro", Arial;
+	color: #2B2B2B;
+	text-align: center;
+}
+
+.register_page .form-user {
+	margin: 0 0 60px 0;
+}
+
+.register_page .form-user h3 {
+	margin: 0 0 44px 0;
+	padding: 30px 0 0 0;
+}
+
+.register_page .inp-group {
+	position: relative;
+	margin: 0 0 24px 0;
+
+	white-space: nowrap;
+}
+
+.register_page .inp-line {
+	position: relative;
+
+	display: inline-block;
+	margin: 0 21px 0 0;
+
+	white-space: normal;
+}
+
+.register_page .inp-line p.inp-error {
+	position: absolute;
+	top: 43px;
+	right: 0;
+	left: 0;
+
+	text-align: center;
+}
+
+.register_page .inp-group > p.inp-error {
+	margin-top: 3px;
+}
+
+.register_page .inp-line:last-child {
+	margin-right: 0;
+}
+
+.register_page .inp-style {
+	width: 210px;
+}
+
+.register_page .inp-long {
+	width: 480px;
+}
+
+.register_page .jq-selectbox.inp-decorate {
+	width: 242px;
+}
+
+.register_page .inp-fw .inp-line {
+	width: 242px;
+}
+
+.register_page .jq-selectbox.inp-year {
+	width: 68px;
+}
+
+.register_page .jq-selectbox.inp-month {
+	width: 98px;
+}
+
+.register_page .jq-selectbox.inp-day {
+	width: 68px;
+}
+
+.register_page textarea.inp-style {
+	width: 746px;
+	max-width: 746px;
+	height: 115px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+/* form project */
+.form-project {
+	margin: 0 0 35px 0;
+}
+
+.register_page textarea.inp-about {
+	height: 80px;
+}
+
+/* Register top labels */
+.register_page .inp-group.register_page__pp {
+	margin-top: 42px;
+	margin-bottom: 33px;
+}
+
+.register_page__pp label {
+	display: inline-block;
+	margin: 0 0 0 5px;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #919FA0;
+
+	cursor: pointer;
+}
+
+.register_page__pp div.checked + label {
+	color: #2B2B2B;
+}
+
+.inp-ch {}
+
+.inp-ch-left {
+	float: left;
+	width: 510px;
+	margin-right: 20px;
+}
+
+.inp-ch-left textarea.inp-style {
+	width: 478px;
+	max-width: 478px;
+}
+
+.inp-ch-right {
+	float: left;
+	width: 240px;
+}
+
+.inp-ch-right .inp-upload-img {
+	margin-top: 30px;
+}
+
+.inp-ch-right--two .inp-upload-img {
+	margin-top: 85px;
+}
+
+.register_page .inp-agree {
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.register_page .inp-agree .jq-checkbox {
+	margin-right: 5px;
+}
+
+.register_page .inp-agree a {
+	color: #2B2B2B;
+	text-decoration: underline;
+}
+
+.register_page .inp-agree a:hover {
+	color: #E31D1A;
+}
+
+.register_page .inp-submit {
+	padding: 20px 0 65px 0;
+
+	text-align: center;
+}
+
+
+
+/* Register steps */
+.register_page__steps {}
+
+.register_page__steps h3 {
+	margin-bottom: 17px;
+	padding-top: 40px;
+
+	text-align: left;
+}
+
+.register_page__steps h3 p.inp-error {
+	position: relative;
+	top: 0;
+	left: 10px;
+
+	display: inline-block;
+}
+
+/* Register event */
+.register_page__events {
+	margin: 0 0 20px 0;
+}
+
+.register_page__events h3 {
+	background: none;
+	text-align: left;
+}
+
+.register_page__events h3 p.inp-error {
+	position: relative;
+	top: 0;
+	left: 10px;
+
+	display: inline-block;
+}
+
+
+/* Steps list */
+.steps_list {
+	overflow: hidden;
+}
+
+.steps_item {
+	float: left;
+	width: 240px;
+	margin: 0 20px 15px 0;
+}
+
+.steps_item .numb {
+	float: left;
+
+	display: block;
+	width: 37px;
+	height: 37px;
+	border: 1px solid #E8E8E8;
+	margin: 0 5px 0 0;
+
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+
+	background-color: #E8E8E8;
+
+	font: normal 18px/40px "Myriad Pro", Arial;
+	color: #919FA0;
+	text-align: center;
+}
+
+.steps_item .numb.plus {
+	cursor: pointer;
+}
+
+.steps_item .txt {
+	overflow: hidden;
+	margin: 7px 0 0 0;
+}
+
+.steps_item .txt textarea {
+	outline: none;
+
+	width: 100%;
+	border: 1px solid transparent;
+	padding: 5px;
+
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #919FA0;
+
+	resize: none;
+}
+
+.steps_item .txt textarea:focus {
+	border-color: #E4E4E4;
+}
+
+
+/* Register link */
+.register_page__link {
+	margin: 0 0 40px 0;
+}
+
+.register_page__link h3 {
+	margin-bottom: 15px;
+
+	background: none;
+	text-align: left;
+}
+
+.register_page__link .plus {
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	border: 1px solid #E8E8E8;
+	margin: 0 5px 0 0;
+
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+
+	background-color: #E8E8E8;
+
+	font: normal 18px/40px "Myriad Pro", Arial;
+	color: #919FA0;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+.register_page__link p.inp-error {
+	position: relative;
+	top: 0;
+	left: 10px;
+
+	display: inline-block;
+
+	vertical-align: middle;
+}
+
+
+/* Profile page */
+.page_profile {}
+
+.page_profile--noprojects .page_profile__top {
+	padding-bottom: 120px;
+}
+
+.page_profile__top {
+	overflow: hidden;
+	padding: 0 0 40px 0;
+}
+
+.page_profile__top .avatar {
+	float: left;
+	margin: 0 55px 0 0;
+
+	text-align: center;
+}
+
+.page_profile__top .avatar-big {
+	margin: 0 0 15px 0;
+}
+
+.page_profile__top .avatar a {
+	-webkit-transition: color 150ms ease;
+	   -moz-transition: color 150ms ease;
+	    -ms-transition: color 150ms ease;
+	     -o-transition: color 150ms ease;
+	        transition: color 150ms ease;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #8E9D9E;
+	text-decoration: underline;
+}
+.page_profile__top .avatar a:hover {color: #3A3A3A;}
+
+.page_profile__top .info {
+	float: left;
+	width: 310px;
+	margin: 85px 0 0 0;
+
+	font: normal 17px/24px "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.page_profile__top .btns {
+	float: right;
+	margin: 80px 0 0 0;
+}
+
+.page_profile__top .btns .btn {
+	width: 160px;
+}
+
+.profile_project__items {
+	padding: 0 100px 30px 100px;
+
+	background-color: #F7F8F9;
+}
+
+.profile_project__item {
+	overflow: hidden;
+	border-bottom: 1px solid #E1E1E1;
+	padding: 37px 0;
+}
+
+.profile_project__item:last-child {
+	border-bottom: 0;
+}
+
+.profile_project__item a {
+	text-decoration: none;
+}
+
+.profile_project__item .thumb {
+	float: left;
+	width: 185px;
+	padding: 0 60px 0 0;
+}
+
+.profile_project__item .thumb img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.profile_project__item .info {
+	float: left;
+	width: 240px;
+	margin: 10px 70px 0 0;
+}
+
+.profile_project__item .info h4 {
+	margin: 0 0 6px 0;
+
+	font: bold 16px/100% "Myriad Pro", Arial;
+	color: #3A3A3A;
+	text-transform: uppercase;
+}
+
+.profile_project__item .info p {
+	margin: 0 0 10px 0;
+
+	font: normal 14px/20px "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.profile_project__item .info .votes {
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #8E9D9E;
+}
+
+.profile_project__item .info .votes span {
+	font-weight: bold;
+	font-size: 16px;
+	color: #009639;
+}
+
+.profile_project__item .status {
+	float: left;
+	width: 215px;
+
+	text-align: center;
+}
+
+.profile_project__item .status .moderation {
+	margin: 40px 0 0 0;
+	padding: 30px 0 0 0;
+
+	background: url(../images/ico-eye.png) center top no-repeat;
+
+	font: normal 16px/100% "Myriad Pro", Arial;
+	color: #C8CCCC;
+}
+
+.profile_project__item .status .share_counters {
+	display: inline-block;
+	width: 72px;
+	margin: 20px 0 0 0;
+}
+
+.profile_project__item .status .share_counters .share__fb,
+.profile_project__item .status .share_counters .share__vk {
+	margin: 7px 0;
+}
+
+
+/* Rules page */
+.rules_page .page_box {
+	padding-bottom: 40px;
+}
+
+/* Faq page */
+.faq_page {}
+
+.faq_page .page_box {
+	padding-bottom: 80px;
+}
+
+.faq_form-btn {
+	margin: -10px 0;
+
+	text-align: center;
+}
+
+.faq_form-btn span {
+	display: inline-block;
+
+	font: normal 16px/100% "Myriad Pro", Arial;
+	color: #E31D1A;
+	text-transform: uppercase;
+
+	cursor: pointer;
+}
+
+.faq_form-btn--active span,
+.faq_form-btn span:hover {
+	color: #2B2B2B;
+}
+
+.faq__forms {
+	margin: 30px 0 40px 0;
+}
+
+.faq__forms .inp-group {
+	margin: 0 0 23px 0;
+
+	white-space: nowrap;
+}
+
+.faq__forms .inp-line {
+	display: inline-block;
+
+	white-space: normal;
+}
+
+.faq__forms .inp-name .inp-style {
+	width: 215px;
+	margin-right: 16px;
+}
+
+.faq__forms .inp-mail .inp-style {
+	width: 215px;
+	margin-right: 15px;
+}
+
+.faq__forms .inp-theme .jq-selectbox {
+	width: 245px;
+}
+
+
+.faq__forms textarea.inp-style {
+	width: 745px;
+	max-width: 745px;
+	height: 115px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.faq__forms .inp-btns {
+	margin: 30px 0 0 0;
+
+	text-align: center;
+}
+
+.faq__forms .inp-btns .btn {
+	margin: 0 3px;
+}
+
+.faq_items {}
+
+.faq_item {
+	margin: 30px 0 0 0;
+	padding: 35px 0 0 0;
+
+	background: url(../images/bg-pp-line.png) center top no-repeat;
+}
+
+.faq_item-head {}
+
+.faq_item-head h3 {
+	display: block;
+
+	font: normal 18px/24px "Myriad Pro", Arial;
+	color: #4d4d4d;
+
+	cursor: pointer;
+}
+
+.faq_item-head h3:hover {
+	color: #2b2b2b;
+}
+
+.faq_item-body {
+	margin: 20px 0 0 0;
+}
+
+.faq_item-body p {
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #919FA0;
+}
+
+
+/* Footer */
+.footer {
+	overflow: hidden;
+	height: 190px;
+	margin: -190px 0 0 0;
+
+	background-color: #fff;
+}
+
+.footer--grey .footer__top {
+	background-color: #F7F8F9;
+}
+
+.footer .wrap {
+	overflow: hidden;
+}
+
+.footer__top {
+	height: 65px;
+	margin: 0 0 40px 0;
+	padding: 15px 0 0 0;
+}
+
+.footer__logo {
+	float: left;
+	width: 116px;
+	margin: 0 30px 0 0;
+}
+
+.footer__logo img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.footer__links {
+	float: left;
+	margin: 25px 0 0 0;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #E0E7E9;
+}
+
+.footer__links ul {
+	list-style: none;
+}
+
+.footer__links ul li {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+.footer__links ul li a {
+	display: inline-block;
+	margin: 0 15px 0 0;
+
+	-webkit-transition: color 150ms ease;
+	   -moz-transition: color 150ms ease;
+	    -ms-transition: color 150ms ease;
+	     -o-transition: color 150ms ease;
+	        transition: color 150ms ease;
+
+	color: #647174;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.footer__links ul li a:hover {
+	color: #E31D1A;
+}
+
+.footer__sp {
+	float: right;
+	width: 210px;
+}
+
+.footer__sp p {
+	margin: 0 0 3px 0;
+
+	font: normal 10px/100% "Myriad Pro", Arial;
+	color: #B9C4C6;
+}
+
+.footer__sp a {
+	display: block;
+	margin: 0 20px;
+}
+
+.footer__sp img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.footer__txt {
+	float: left;
+	width: 300px;
+	padding: 0 0 0 13px;
+
+	background: url(../images/ico-bt_star.png) left top no-repeat;
+
+	font: normal 12px/16px "Myriad Pro", Arial;
+	color: #B9C4C6;
+}
+
+.footer__copy {
+	float: right;
+	width: 440px;
+
+	font: normal 12px/16px "Myriad Pro", Arial;
+	color: #B9C4C6;
+	text-align: justify;
+}
+
+
+/* Popups */
+.popup_holder {
+	z-index: 10005;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.popup_layer {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background: rgba(0,0,0,0.8);
+}
+
+.popup_wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.popup__in {
+	z-index: 110;
+	position: relative;
+	width: 100%;
+
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.popup {
+	z-index: 115;
+	position: relative;
+
+	display: none;
+	width: 620px;
+	margin: 25px auto;
+	padding: 65px 0 40px 0;
+
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+
+	background: #fff;
+}
+
+.popup__bt {
+	margin: 45px 0 0 0;
+	padding: 35px 0 0 0;
+
+	background: url(../images/bg-pp-line.png) center top no-repeat;
+
+	text-align: center;
+}
+
+.popup__bt a {
+	-webkit-transition: color 150ms ease;
+	   -moz-transition: color 150ms ease;
+	    -ms-transition: color 150ms ease;
+	     -o-transition: color 150ms ease;
+	        transition: color 150ms ease;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #8E9D9E;
+}
+
+.popup__bt a:hover {
+	color: #3a3a3a;
+}
+
+.popup .inp-group {
+	margin: 0 0 7px 0;
+}
+
+.popup .inp-medium {
+	width: 215px;
+	max-width: 215px;
+}
+
+.popup .inp-btns {
+	margin: 30px 0 0 0;
+}
+
+.popup .inp-btns .btn {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.popup .inp-upload-img {
+	margin-right: 50px;
+	margin-bottom: 15px;
+}
+
+.inp-upload-img {
+	display: inline-block;
+	height: 50px;
+	padding: 0 0 0 65px;
+
+	background: url(../images/ico-upl-img.png) left center no-repeat;
+
+	font: normal 14px/130% "Myriad Pro", Arial;
+	color: #8E9D9E;
+
+	cursor: pointer;
+}
+
+.inp-upload-img.inp-error {
+	background-image: url(../images/ico-upl-img-error.png);
+}
+
+.inp-upload-img span {
+	display: inline-block;
+	margin-top: 15px;
+	text-decoration: underline;
+}
+
+.inp-upload-img p.inp-error {
+	margin: 5px 0 0 0;
+
+	text-align: left;
+	text-decoration: none!important;
+}
+
+.inp-upload-img--two span {
+	margin-top: 6px;
+}
+
+.inp-upload-img input {
+    visibility: hidden;
+
+	position: absolute;
+    top: 0;
+}
+
+.inp-upload-img:hover span {
+	color: #3a3a3a;
+}
+
+.popup h3 {
+	margin: 0 0 10px 0;
+
+	font: normal 31px/100% "Myriad Pro", Arial;
+	color: #000;
+	text-align: center;
+}
+
+.popup__txt {
+	text-align: center;
+}
+
+.popup__txt p {
+	margin: 0 0 30px 0;
+
+	font: normal 14px/18px "Myriad Pro", Arial;
+	color: #2B2B2B;
+}
+
+.popup__txt p a {
+	color: #8E9D9E;
+	text-decoration: underline;
+}
+
+.popup__txt p a:hover {
+	color: #009647;
+}
+
+/*  */
+.popup_login .social_auth {
+	margin: 0;
+}
+
+.popup_login h3 {
+	margin-bottom: 20px;
+}
+
+.popup_login .popup__bt {
+	margin-top: 35px;
+	padding-top: 20px;
+}
+
+.popup_login .popup__bt p {
+	margin: 0 0 10px 0;
+}
+
+
+.popup_login .inp-group .inp-line {
+	position: relative;
+
+	display: inline-block;
+}
+
+.popup_login .forgot-btn {
+	position: absolute;
+	top: 45px;
+	right: 0;
+
+	font: normal 12px/100% "Myriad Pro", Arial;
+	color: #8E9D9E;
+	white-space: nowrap;
+}
+
+.popup_login .forgot-btn:hover {
+	color: #3A3A3A;
+}
+
+.popup_pwd2 h3 {
+	margin: 0 0 30px 0;
+}
+
+.popup_auth h3 {
+	margin: 0 0 30px 0;
+}
+
+.popup_auth .reg-agree {
+	width: 400px;
+	margin: 0 auto;
+
+	font: normal 10px/150% "Myriad Pro", Arial;
+	color: #2B2B2B;
+	text-align: left;
+}
+
+.popup_auth .reg-agree {
+	margin-top: 25px;
+}
+
+.popup_auth .reg-agree .inp-decorate {
+	margin-top: -5px;
+	margin-right: 5px;
+}
+
+.popup_socialauth h3 {
+	margin: 0 0 40px 0;
+}
+
+.social_auth {
+	margin: 0 0 10px 0;
+}
+
+.social_auth ul {
+	list-style: none;
+}
+
+.social_auth ul li {
+	display: inline-block;
+	margin: 0 3px;
+}
+
+.social_auth ul li a {
+	opacity: 0.85;
+
+	display: block;
+	width: 54px;
+	height: 51px;
+
+	-webkit-transition: opacity 150ms ease-in-out;
+	   -moz-transition: opacity 150ms ease-in-out;
+	    -ms-transition: opacity 150ms ease-in-out;
+	     -o-transition: opacity 150ms ease-in-out;
+	        transition: opacity 150ms ease-in-out;
+
+	background: url(../images/icons-social_auth.png) no-repeat;
+
+	text-indent: -9999px;
+
+	cursor: pointer;
+}
+.social_auth ul li a:hover {
+	opacity: 1;
+}
+
+.social_auth ul li.mail a {background-position: 0px 0px;}
+.social_auth ul li.vk a {background-position: -66px 0px;}
+.social_auth ul li.fb a {background-position: -132px 0px;}
+
+
+
+/* Popup age */
+.popup_age {}
+
+.popup_age h3 {
+	margin-bottom: 30px;
+
+	line-height: 120%;
+}
+
+.popup_age p {
+	margin-bottom: 0;
+}
+
+.popup_age .inp-group {
+	margin: 0 0 20px 0;
+	padding: 15px 0 25px 0;
+
+	background: url(../images/bg-pp-line.png) center bottom no-repeat;
+
+	text-align: center;
+}
+
+.popup_age .inp-style {
+	width: 40px;
+	margin: 0 3px;
+
+	text-align: center;
+}
+
+.popup .popup-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	width: 23px;
+	height: 22px;
+
+	background: url(../images/ico-pp_close.png) center top no-repeat;
+
+	cursor: pointer;
+	text-indent: -9999px;
+}
+
+.popup .popup-close:hover {
+	background-position: center bottom;
+}
+
+
+
+/* Clearfix */
+.cf:after {
+	visibility: hidden;
+	display: block;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .cf {zoom: 1;}
+*:first-child+html .cf {zoom: 1;}
+
+
+
+/* Checkbox */
+.jq-checkbox {
+	opacity: 0.25;
+
+	top: -1px;
+	width: 20px;
+	height: 20px;
+
+	-webkit-transition: opacity 150ms ease;
+	   -moz-transition: opacity 150ms ease;
+	    -ms-transition: opacity 150ms ease;
+	     -o-transition: opacity 150ms ease;
+	        transition: opacity 150ms ease;
+
+	background: url(../images/icons-checkbox.png) center bottom no-repeat;
+
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.inp-line:hover .jq-checkbox,
+.jq-checkbox:hover {
+	opacity: 1;
+}
+
+.jq-checkbox.checked {
+	opacity: 1;
+	background-position: center top;
+}
+.jq-checkbox.focused {}
+.jq-checkbox.disabled {
+	opacity: 0.55;
+	filter: alpha(opacity=55);
+}
+
+.jq-checkbox.inp-error {
+	opacity: 1;
+
+	-webkit-box-shadow: inset 0 0 2px 2px #ec0e21;
+	        box-shadow: inset 0 0 2px 2px #ec0e21;
+}
+
+
+/* Radio */
+.jq-radio {
+	opacity: 0.25;
+	width: 18px;
+	height: 18px;
+
+	-webkit-transition: opacity 150ms ease;
+	   -moz-transition: opacity 150ms ease;
+	    -ms-transition: opacity 150ms ease;
+	     -o-transition: opacity 150ms ease;
+	        transition: opacity 150ms ease;
+
+	background: url(../images/icons-radio.png) center bottom no-repeat;
+
+	vertical-align: middle;
+	cursor: pointer;
+}
+.inp-line:hover .jq-radio,
+.jq-radio:hover {
+	opacity: 1;
+}
+.jq-radio.checked {
+	opacity: 1;
+	background-position: center top;
+}
+.jq-radio.focused {}
+.jq-radio.disabled {
+	opacity: 0.55;
+	filter: alpha(opacity=55);
+}
+
+
+/* Select */
+.jq-selectbox {
+	display: inline-block;
+
+	vertical-align: middle;
+	cursor: pointer;
+}
+.jq-selectbox__select {
+	z-index: 2;
+	position: relative;
+
+	height: 38px;
+	padding: 0 20px 0 15px;
+
+	border: 1px solid #e1e1e1;
+
+	-webkit-transition: background-color 150ms ease-in-out;
+	   -moz-transition: background-color 150ms ease-in-out;
+	    -ms-transition: background-color 150ms ease-in-out;
+	     -o-transition: background-color 150ms ease-in-out;
+	        transition: background-color 150ms ease-in-out;
+
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+
+	background-color: #F7F7F7;
+
+	font: normal 14px/41px "Myriad Pro", Arial;
+	color: #919FA0;
+	vertical-align: middle;
+}
+.jq-selectbox.inp-error .jq-selectbox__select {border-color: #E31D1A;}
+.jq-selectbox:hover .jq-selectbox__select {background-color: #fff;}
+.jq-selectbox__select:active {}
+.jq-selectbox.focused .jq-selectbox__select {}
+.jq-selectbox.disabled .jq-selectbox__select {
+	opacity: 0.55;
+	cursor: default;
+}
+.jq-selectbox__select-text {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.jq-selectbox .placeholder {
+	color: #888;
+}
+.jq-selectbox__trigger {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 8px;
+	height: 100%;
+}
+.jq-selectbox__trigger-arrow {
+	opacity: 0.5;
+	position: absolute;
+	top: 16px;
+	right: 8px;
+	overflow: hidden;
+	width: 9px;
+	height: 6px;
+	background: url(../images/ico-select_arr.png) no-repeat;
+}
+
+.jq-selectbox:hover .jq-selectbox__trigger-arrow {opacity: 1;}
+.jq-selectbox.disabled .jq-selectbox__trigger-arrow {
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+}
+.jq-selectbox__dropdown {
+	top: 36px;
+	width: 100%;
+
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	border: 1px solid #e1e1e1;
+	border-radius: 4px;
+
+	background-color: #fff;
+
+	font: normal 14px/100% "Myriad Pro", Arial;
+	color: #919FA0;
+}
+.jq-selectbox ul {
+	margin: 0;
+	padding: 4px 0 0 0;
+}
+.jq-selectbox li {
+	margin: 0 5px;
+	height: 35px;
+	border-bottom: 1px solid #F6F6F6;
+	padding: 0 10px;
+
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	     -o-user-select: none;
+
+	line-height: 35px;
+	color: #919fa0;
+	white-space: nowrap;
+}
+.jq-selectbox li:last-child {border-bottom: 0;}
+.jq-selectbox li.selected {}
+.jq-selectbox li:hover {color: #2B2B2B;}
+.jq-selectbox li.disabled {display: none;}
+
+
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/*
+ *  Core Owl Carousel CSS File
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.owl-carousel .owl-stage-outer {
+  position: relative;
+ /* overflow: hidden;*/
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel.owl-loaded {
+  display: block;
+}
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+.owl-carousel .owl-refresh .owl-item {
+  display: none;
+}
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+.owl-carousel.owl-text-select-on .owl-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+}

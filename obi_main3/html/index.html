@@ -1,0 +1,79 @@
+<!doctype html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Obi</title>
+
+<link rel="stylesheet" media="screen" href="style.css">
+<!--[if IE]><script src="js/html5.js"></script><![endif]-->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/jquery.jsmovie.1.4.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$('.ball_sq').jsMovie({
+		folder: 'images/sq/',
+		sequence: '#.png',
+		from: 0,
+		to: 148,
+		height: 516,
+		width: 600,
+		repeat: true,
+		fps: 30,
+		playOnLoad: true
+	});
+
+});
+</script>
+
+
+</head>
+
+<body>
+
+<div class="main_action">
+	
+	<div class="main_action__in">
+		
+		<div class="main_action__txt">
+
+			<div class="main_action__title">
+				<h2>Загадай машину<br> на новый год!</h2>
+				<p>Покупайте – в декабре, будут скидки – в январе!</p>
+			</div><!--.main_action__title-->
+
+			<div class="main_action__info">
+				<ul>
+					<li>Совершите покупку в декабре<br> от 2000р и получите купон<br> на скидку 200р</li>
+					<li>Воспользуйтесь скидкой<br> в январе при покупке<br> от 2000р</li>
+					<li>Участвуйте в розыгрыше<br> автомобиля, зарегистрировав<br> уникальный код удачи</li>
+				</ul>
+			</div><!--.main_action__info-->
+
+			<div class="main_action__form">
+				<p>Введите ваш e-mail, чтобы узнать первым о начале регистрации кодов</p>
+				
+				<div class="main_action__form-in cf">
+					<form action="#">
+						<input type="text" name="#" placeholder="Ваш е-mail">
+						<input type="submit" value="Отправить">
+					</form>
+				</div><!--.main_action__form-in-->
+
+				<a href="#" class="rules-btn">Полные правила акции</a>
+
+			</div><!--.main_action__form-->
+
+		</div><!--.main_action__txt-->
+
+		<div class="ball_sq"></div>
+
+	</div><!--.main_action__in-->
+
+</div><!--.main_action-->
+
+
+</body>
+</html>

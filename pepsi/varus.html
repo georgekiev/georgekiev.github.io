@@ -1,0 +1,523 @@
+<!doctype html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pepsi — Приєднуйся до Чемпіонів!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
+<link rel="stylesheet" media="screen" href="style.css">
+<!--[if IE]><script src="js/html5.js"></script><![endif]-->
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/design.js"></script>
+</head>
+
+<body>
+
+<div class="nav">
+	<div class="nav__logo">
+		<a href="#"><img src="images/logo.png" alt="Pepsi"></a>
+	</div><!--.nav__logo-->
+
+	<div class="nav-btn">
+		<div class="nav-btn-wrap">
+			<div class="line1"></div><div class="line2"></div><div class="line3"></div>
+		</div>
+	</div>
+</div><!--.nav-->
+
+<div class="menu">
+	<ul class="list-unstyled">
+		<li><a href="#">ОФІЦІЙНІ ПРАВИЛА АКЦІЇ</a></li>
+		<li><a href="#">ПЕРЕМОЖЦІ</a></li>
+		<li><a href="#">НА ГОЛОВНУ</a></li>
+	</ul>
+</div><!--.menu-->
+
+<div class="container">
+
+<div class="index_page index_epitsentr">
+
+	<div class="index_page__body">
+
+		<div class="index_page__bg">
+			<img src="images/bg-index.jpg" alt="">
+		</div>
+		
+		<h2>Приєднуйся <span class="yellow">до Чемпіонів!</span></h2>
+
+		<div class="reg_info">
+			<ul class="list-unstyled">
+				<li>З 15.02.2016 до 15.04.2016 купуй продукцію ТМ Pepsi та ТМ Lay’s разом в мережі супермаркетів «Таврія В»</li>
+				<li>Отримай чек з унікальним кодом</li>
+				<li>Реєструй код через SMS на короткий номер 3200 або на цьому сайті</li>
+				<li>Візьми участь у розіграші подарунків</li>
+			</ul>
+
+			<a href="#" data-toggle="modal" data-target="#reg_code" class="reg-btn">ЗАРЕЄСTРУВАТИ КОД</a>
+
+			<a href="#" data-toggle="modal" data-target="#" class="reg-btn">
+				РЕЄСТРАЦІЯ/ВХІД
+			</a>
+		</div><!--.reg_info-->
+		
+		<div class="copy">© 2016 PEPSICO, INC. ALL RIGHTS RESERVED.</div>
+
+		<div class="bt_menu">
+			<ul class="list-unstyled">
+				<li><a href="#">ОФІЦІЙНІ ПРАВИЛА АКЦІЇ</a></li>
+				<li><a href="#">ПЕРЕМОЖЦІ</a></li>
+				<li><a href="#">НА ГОЛОВНУ</a></li>
+			</ul>
+		</div><!--.bt_menu-->
+
+	</div><!--.index_page__body-->	
+
+	<div class="index_page__right">
+		<div class="wrap">
+
+			<div class="action">
+				<img src="images/ico-action.png" alt="">
+			</div>
+
+			<div class="gift_box_l">
+
+				<h3 class="gift_title">Можеш обміняти свої<br> коди на ПОДАРУНКи:</h3>
+
+				<div class="gift_item">
+					<img src="images/gift-watch.png" alt="">
+				</div>
+
+				<div class="gift_item">
+					<img src="images/gift-tshirt3.png" alt="">
+				</div>
+
+				<div class="gift_item">
+					<img src="images/gift-bag.png" alt="">
+				</div>
+
+			</div><!--gift_box_l-->
+
+			<div class="gift_box_r">
+
+				<h3 class="gift_title">Розіграш Щотижня</h3>
+
+				<div class="gift_item">
+					<img src="images/gift-ps4.png" alt="">
+				</div>
+
+			</div><!--.gift_box_r-->
+
+			<div class="logo_min">
+				<a href="#"><img src="images/logo-varus_min.png" alt=""></a>
+			</div><!--.logo_min-->
+
+		</div><!--.wrap-->
+	</div><!--.index_page__right-->
+
+
+</div><!--.index_page-->
+
+</div><!--.container-->
+
+
+<!-- Modal Register code -->
+<div class="modal fade" id="reg_code" tabindex="-1" role="dialog" aria-labelledby="reg_code">
+  <div class="modal-dialog modal_box" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+
+		<div class="modal_box__head">
+      		<h3>Реєстрація</h3>
+      	</div><!--.modal_box__head-->
+        
+		<div class="modal_box__body">
+		
+			<form action="#">
+		        <div class="inp-group cf">
+		        	<div class="inp-line270">
+		        		<label for="reg_ch">ВВЕДІТЬ НОМЕР ЧЕКА</label>
+		        	</div>
+
+		        	<div class="inp-line-50"> 
+		        		<input type="text" name="#" class="inp-style inp-fw inp-mask-code" id="reg_ch">
+		        	</div>
+		        </div><!--.inp-group-->
+
+		        <div class="inp-group cf">
+		        	<div class="inp-line270">
+		        		<label for="reg_mob">НОМЕР МОБІЛЬНОГО</label>
+		        	</div>
+
+		        	<div class="inp-line-50"> 
+		        		<input type="text" name="#" class="inp-style inp-fw inp-mask-phone" id="reg_mob">
+		        	</div>
+		        </div><!--.inp-group-->
+				
+				<div class="btn-box">
+					<input type="submit" value="ГОТОВО!" class="btn-yellow">
+				</div>
+		    </form>    
+ 
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Register code -->
+
+
+
+<!-- Modal Info -->
+<div class="modal fade" id="info_popup" tabindex="-1" role="dialog" aria-labelledby="info_popup">
+  <div class="modal-dialog modal_box" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+ 
+		<div class="modal_box__body">
+		
+			<div class="modal_txt">
+				<p>Ваш код зареєстровано <br>
+				для участі в акції Pepsi+Lay’s! <br>
+				Деталі на <a href="#">pepsi.ua</a></p>
+			</div>   
+ 
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Info -->
+
+
+
+<!-- Modal Info -->
+<div class="modal fade" id="gift_popup1" tabindex="-1" role="dialog" aria-labelledby="gift_popup1">
+  <div class="modal-dialog modal_gift" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+ 
+		<div class="modal_box__body cf">
+		
+ 			<div class="modal_gift__thumb">
+ 				<img src="images/gift-tshirt-big.png" alt="">
+
+ 				<div class="title">футболка</div>
+ 				<div class="counter">Залишилось <span>330</span></div>
+ 				<div class="codes"><span>10</span> кодів</div>
+ 			</div><!--.modal_gift__thumb-->
+
+ 			<div class="modal_gift__txt">
+ 				
+				<div class="modal_gift__delivery">
+				<form action="#">
+					<h3>Доставка</h3>
+
+					<div class="inp-group">
+						<label for="#">ім’я</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<div class="inp-group">
+						<label for="#">прізвище</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<div class="inp-group">
+						<label for="#">МІСТО</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<div class="inp-group">
+						<label for="#">№ Найближчого відділення<br> “Нової пошти”</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<p><a href="http://novaposhta.ua" target="_blank">Веб-сторінка сайту “Нова Пошта”</a></p>
+					
+					<div class="inp-bt">
+						<input type="submit" value="Замовити" class="btn-submit">
+					</div>
+				</form>
+				</div><!--.modal_gift__delivery-->
+
+ 			</div><!--.modal_gift__txt-->
+
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Info -->
+
+
+<!-- Modal Info -->
+<div class="modal fade" id="gift_popup2" tabindex="-1" role="dialog" aria-labelledby="gift_popup2">
+  <div class="modal-dialog modal_gift" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+ 
+		<div class="modal_box__body cf">
+		
+ 			<div class="modal_gift__thumb">
+ 				<img src="images/gift-bag-big.png" alt="">
+
+ 				<div class="title">РЮКЗАК</div>
+ 				<div class="counter">Залишилось <span>150</span></div>
+ 				<div class="codes"><span>20</span> кодів</div>
+ 			</div><!--.modal_gift__thumb-->
+
+ 			<div class="modal_gift__txt">
+ 				
+				<div class="modal_gift__delivery">
+				<form action="#">
+					<h3>Доставка</h3>
+
+					<div class="inp-group">
+						<label for="#">ім’я</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<div class="inp-group">
+						<label for="#">прізвище</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<div class="inp-group">
+						<label for="#">МІСТО</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<div class="inp-group">
+						<label for="#">№ Найближчого відділення<br> “Нової пошти”</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<p><a href="http://novaposhta.ua" target="_blank">Веб-сторінка сайту “Нова Пошта”</a></p>
+					
+					<div class="inp-bt">
+						<input type="submit" value="Замовити" class="btn-submit">
+					</div>
+				</form>
+				</div><!--.modal_gift__delivery-->
+
+ 			</div><!--.modal_gift__txt-->
+
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Info -->
+
+
+<!-- Modal Info -->
+<div class="modal fade" id="gift_popup3" tabindex="-1" role="dialog" aria-labelledby="gift_popup3">
+  <div class="modal-dialog modal_gift" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+ 
+		<div class="modal_box__body cf">
+		
+ 			<div class="modal_gift__thumb">
+ 				<img src="images/gift-watch-big.png" alt="">
+
+ 				<div class="title">годинник</div>
+ 				<div class="counter">Залишилось <span>100</span></div>
+ 				<div class="codes"><span>25</span> кодів</div>
+ 			</div><!--.modal_gift__thumb-->
+
+ 			<div class="modal_gift__txt">
+ 				
+				<div class="modal_gift__delivery">
+				<form action="#">
+					<h3>Доставка</h3>
+
+					<div class="inp-group">
+						<label for="#">ім’я</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<div class="inp-group">
+						<label for="#">прізвище</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<div class="inp-group">
+						<label for="#">МІСТО</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<div class="inp-group">
+						<label for="#">№ Найближчого відділення<br> “Нової пошти”</label>
+						<div class="inp-fwh">
+							<input type="text" name="#" class="inp-style">
+						</div>
+					</div><!--.inp-group-->
+
+					<p><a href="http://novaposhta.ua" target="_blank">Веб-сторінка сайту “Нова Пошта”</a></p>
+					
+					<div class="inp-bt">
+						<input type="submit" value="Замовити" class="btn-submit">
+					</div>
+				</form>
+				</div><!--.modal_gift__delivery-->
+
+ 			</div><!--.modal_gift__txt-->
+
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Info -->
+
+
+<!-- Modal Info -->
+<div class="modal fade" id="reg_popup" tabindex="-1" role="dialog" aria-labelledby="reg_popup">
+  <div class="modal-dialog modal_box modal_reg" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+ 
+		<div class="modal_box__body">
+		<form action="#">
+
+			<h3>Реєстрація</h3>
+
+			<div class="modal_reg__form1">
+				<div class="inp-group">
+					<label for="#">ім’я</label>
+					<div class="inp-fwh">
+						<input type="text" name="#" class="inp-style">
+					</div>
+				</div><!--.inp-group-->
+			</div>
+
+			<div class="modal_reg__form2">
+				<div class="inp-group">
+					<label for="#">прізвище</label>
+					<div class="inp-fwh">
+						<input type="text" name="#" class="inp-style">
+					</div>
+				</div><!--.inp-group-->
+			</div>
+
+			<div class="cf"></div>
+
+			<div class="inp-group inp-mob">
+				<label for="#">Номер мобІльного</label>
+				<div class="inp-fwh">
+					<input type="text" name="#" class="inp-style inp-mask-phone">
+					<input type="submit" value="замовити sms з паролем" class="btn-submit">
+				</div>
+				
+			</div><!--.inp-group-->
+
+			<div class="inp-group cf">
+				<label for="#">введіть пароль з SMS*</label>
+				<div class="inp-fwh">
+					<input type="text" name="#" class="inp-style">
+				</div>
+			</div><!--.inp-group-->
+
+			<div class="bt_submit">
+				<input type="submit" value="Зареєструватись!" class="btn-submit">
+			</div>
+			
+			<div class="bt_links">
+				<a href="#">Я вже зареєстрований</a>
+			</div>
+ 
+ 		</form>
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Info -->
+
+
+
+<!-- Modal Info -->
+<div class="modal fade" id="login_popup" tabindex="-1" role="dialog" aria-labelledby="login_popup">
+  <div class="modal-dialog modal_box modal_login" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+ 
+		<div class="modal_box__body">
+		<form action="#">
+
+			<h3>ВХІД</h3>
+
+			<div class="inp-group cf">
+				<label for="#">Номер мобІльного</label>
+				<div class="inp-fwh">
+					<input type="text" name="#" class="inp-style inp-mask-phone">
+				</div>
+			</div><!--.inp-group-->
+
+			<div class="inp-group cf">
+				<label for="#">пароль</label>
+				<div class="inp-fwh">
+					<input type="password" name="#" class="inp-style">
+				</div>
+			</div><!--.inp-group-->
+			
+			<div class="bt_submit">
+				<input type="submit" value="Увійти" class="btn-submit">
+			</div>
+
+			<div class="bt_links">
+				<a href="#">Зареєструватись</a>
+				<a href="#">Забули пароль?</a>
+			</div>
+ 
+ 		</form>
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Info -->
+
+
+<script type="text/javascript">
+    $(window).load(function(){
+          $('#reg_popup').modal('show');
+    });
+</script>
+
+</body>
+</html>

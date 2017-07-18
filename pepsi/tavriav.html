@@ -1,0 +1,205 @@
+<!doctype html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pepsi — Приєднуйся до Чемпіонів!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
+<link rel="stylesheet" media="screen" href="style.css">
+<!--[if IE]><script src="js/html5.js"></script><![endif]-->
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/design.js"></script>
+</head>
+
+<body>
+
+<div class="nav">
+	<div class="nav__logo">
+		<a href="#"><img src="images/logo.png" alt="Pepsi"></a>
+	</div><!--.nav__logo-->
+
+	<div class="nav-btn">
+		<div class="nav-btn-wrap">
+			<div class="line1"></div><div class="line2"></div><div class="line3"></div>
+		</div>
+	</div>
+</div><!--.nav-->
+
+<div class="menu">
+	<ul class="list-unstyled">
+		<li><a href="#">ОФІЦІЙНІ ПРАВИЛА АКЦІЇ</a></li>
+		<li><a href="#">ПЕРЕМОЖЦІ</a></li>
+		<li><a href="#">НА ГОЛОВНУ</a></li>
+	</ul>
+</div><!--.menu-->
+
+<div class="container">
+
+<div class="index_page index_epitsentr">
+
+	<div class="index_page__body">
+
+		<div class="index_page__bg">
+			<img src="images/bg-index.jpg" alt="">
+
+			<div class="milan">
+				<img src="images/img-milan.png" alt="">
+			</div>
+		</div>
+		
+		<h2>Приєднуйся <span class="yellow">до Чемпіонів!</span></h2>
+
+		<div class="reg_info">
+			<ul class="list-unstyled">
+				<li>З 15.02.2016 до 15.04.2016 купуй продукцію ТМ Pepsi та ТМ Lay’s разом в мережі супермаркетів «Таврія В»</li>
+				<li>Отримай чек з унікальним кодом</li>
+				<li>Реєструй код через SMS на короткий номер 3200 або на цьому сайті</li>
+				<li>Візьми участь у розіграші подарунків</li>
+			</ul>
+
+			<a href="#" data-toggle="modal" data-target="#reg_code" class="reg-btn">ЗАРЕЄСTРУВАТИ КОД</a>
+		</div><!--.reg_info-->
+		
+		<div class="copy">© 2016 PEPSICO, INC. ALL RIGHTS RESERVED.</div>
+
+		<div class="bt_menu">
+			<ul class="list-unstyled">
+				<li><a href="#">ОФІЦІЙНІ ПРАВИЛА АКЦІЇ</a></li>
+				<li><a href="#">ПЕРЕМОЖЦІ</a></li>
+				<li><a href="#">НА ГОЛОВНУ</a></li>
+			</ul>
+		</div><!--.bt_menu-->
+
+		<div class="milan">
+			<img src="images/img-milan.png" alt="">
+		</div>
+
+	</div><!--.index_page__body-->	
+
+	<div class="index_page__right">
+		<div class="wrap">
+
+			<div class="action">
+				<img src="images/ico-action.png" alt="">
+			</div>
+
+			<div class="gift_box_l">
+
+				<h3 class="gift_title">Вигравай ПОДАРУНКи</h3>
+
+				<div class="gift_item">
+					<img src="images/gift-tshirt2.png" alt="">
+				</div>
+
+				<div class="gift_item">
+					<img src="images/gift-headph.png" alt="">
+				</div>
+
+			</div><!--gift_box_l-->
+
+			<div class="gift_box_r">
+
+				<h3 class="gift_title">Головний подарунок</h3>
+
+				<div class="gift_item">
+					<img src="images/gift-sony.png" alt="">
+				</div>
+
+			</div><!--.gift_box_r-->
+
+			<div class="logo_min">
+				<a href="#"><img src="images/logo-tavriav_min.png" alt=""></a>
+			</div><!--.logo_min-->
+
+		</div><!--.wrap-->
+	</div><!--.index_page__right-->
+
+
+</div><!--.index_page-->
+
+</div><!--.container-->
+
+
+<!-- Modal Register code -->
+<div class="modal fade" id="reg_code" tabindex="-1" role="dialog" aria-labelledby="reg_code">
+  <div class="modal-dialog modal_box" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+
+		<div class="modal_box__head">
+      		<h3>Реєстрація</h3>
+      	</div><!--.modal_box__head-->
+        
+		<div class="modal_box__body">
+		
+			<form action="#">
+		        <div class="inp-group cf">
+		        	<div class="inp-line270">
+		        		<label for="reg_ch">ВВЕДІТЬ НОМЕР ЧЕКА</label>
+		        	</div>
+
+		        	<div class="inp-line-50"> 
+		        		<input type="text" name="#" class="inp-style inp-fw inp-mask-code" id="reg_ch">
+		        	</div>
+		        </div><!--.inp-group-->
+
+		        <div class="inp-group cf">
+		        	<div class="inp-line270">
+		        		<label for="reg_mob">НОМЕР МОБІЛЬНОГО</label>
+		        	</div>
+
+		        	<div class="inp-line-50"> 
+		        		<input type="text" name="#" class="inp-style inp-fw inp-mask-phone" id="reg_mob">
+		        	</div>
+		        </div><!--.inp-group-->
+				
+				<div class="btn-box">
+					<input type="submit" value="ГОТОВО!" class="btn-yellow">
+				</div>
+		    </form>    
+ 
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Register code -->
+
+
+
+<!-- Modal Info -->
+<div class="modal fade" id="info_popup" tabindex="-1" role="dialog" aria-labelledby="info_popup">
+  <div class="modal-dialog modal_box" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+ 
+		<div class="modal_box__body">
+		
+			<div class="modal_txt">
+				<p>Ваш код зареєстровано <br>
+				для участі в акції Pepsi+Lay’s! <br>
+				Деталі на <a href="#">pepsi.ua</a></p>
+			</div>   
+ 
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Info -->
+
+
+<script type="text/javascript">
+    $(window).load(function(){
+          //$('#reg_code').modal('show');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,788 @@
+<style type="text/css">
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+/* ---- */
+/* Styles */
+.scope_sale {
+	position: relative;
+	height: 130px;
+	margin: 30px 0 0 0;
+	padding: 20px 0 0 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #ff8e42;
+	background: -moz-linear-gradient(top,  #ff8e42 0%, #ff8740 50%, #fb733a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff8e42), color-stop(50%,#ff8740), color-stop(100%,#fb733a));
+	background: -webkit-linear-gradient(top,  #ff8e42 0%,#ff8740 50%,#fb733a 100%);
+	background: -o-linear-gradient(top,  #ff8e42 0%,#ff8740 50%,#fb733a 100%);
+	background: -ms-linear-gradient(top,  #ff8e42 0%,#ff8740 50%,#fb733a 100%);
+	background: linear-gradient(to bottom,  #ff8e42 0%,#ff8740 50%,#fb733a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8e42', endColorstr='#fb733a',GradientType=0 );
+	text-align: center;
+}
+.scope_sale:after {
+	content: ' ';
+	position: absolute;
+	bottom: 0;
+	left: 30px;
+	display: block;
+	width: 218px;
+	height: 156px;
+	background: url(images/img-scope_sale-action.png) no-repeat;
+}
+.scope_sale h3 {
+	margin: 0 0 5px 0;
+	font: normal 60px/100% "Obi-bold", Arial;
+	color: #fff;
+}
+.scope_sale p {
+	margin: 0;
+	font: normal 15px/100% "", Arial;
+	color: #fff;
+}
+.scope_sale__boxes {
+	padding: 25px 0;
+	background-color: #33495B;
+}
+.scope_sale__boxes h3 {
+	margin: 0 0 15px 0;
+	font: normal 33px/100% "Obi-bold", Arial;
+	color: #fff;
+	text-align: center;
+}
+.scope_sale__list {}
+.scope_sale__item {
+	overflow: hidden;
+	float: left;
+	width: 33%;
+	padding: 0 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.scope_sale__item .thumb {
+	position: relative;
+	min-height: 270px;
+	margin: 0 0 25px 0;
+	text-align: center;
+}
+.scope_sale__item .thumb img {
+	display: inline-block;
+	vertical-align: middle;
+}
+.scope_sale__item .thumb .info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font: normal 15px/140% "Arial";
+	color: #fff;
+	text-align: left;
+}
+.scope_sale__item .thumb .sale {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: block;
+	width: 72px;
+	height: 72px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #DF001B;
+	font: normal 25px/72px "Obi-bold", Arial;
+	color: #fff;
+	text-align: center;
+}
+.scope_sale__item .prd_info {}
+.scope_sale__item .prd_info p {
+	float: left;
+	font: normal 15px/140% "Obi-regular", Arial;
+	color: #AEB3B9;
+}
+.scope_sale__item .prd_info .btn-buy {
+	float: right;
+	outline: none;
+	display: block;
+	width: 90px;
+	height: 34px;
+	padding: 0 10px 0 0;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background: #ff7a40 url(http://www.obi.ru/ru/images/bs/2015/11/ico-btn-buy_arr.png) right center no-repeat;
+	font: normal 20px/34px "Obi-bold", Arial;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+.scope_sale__item .prd_info .btn-buy:hover {
+	background-color: #ff570d;
+}
+.btn-buy.btn-watch {
+	width: 110px !important;
+}
+/* Product boxes */
+.prd_boxes {
+	margin: 0 0 25px 0;
+}
+.prd_box__item {
+	overflow: hidden;
+	position: relative;
+	float: left;
+	width: 50%;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	background-color: #666;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: 50%;
+}
+.prd_box__item-in {
+	min-height: 330px;
+}
+
+.prd_box__item-hrs .prd_box__item-in {
+	min-height: 430px;
+}
+
+.prd_box__item .prd_img {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.prd_box__item .prd_img img {
+	display: block;
+}
+.prd_box__item .txt {
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	max-width: 280px;
+}
+.prd_box__item .txt h3 {
+	margin: 0 0 5px 0;
+	font: normal 33px/100% "Obi-bold", Arial;
+	color: #fff;
+}
+.prd_box__item .txt p {
+	margin: 0;
+	font: normal 15px/130% "Arial";
+	color: #fff;
+}
+.prd_box__item .info {
+	opacity: 0.6;
+	position: absolute;
+	bottom: 25px;
+	left: 30px;
+	font: normal 15px/130% "Obi-regular", Arial;
+	color: #fff;
+}
+.prd_box__item .gift_info {
+	position: absolute;
+	top: 150px;
+	right: 30px;
+	display: block;
+	width: 122px;
+	height: 47px;
+	padding: 10px 0 0 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: url(http://www.obi.ru/ru/images/bs/2015/11/bg-gift_info.png) no-repeat;
+	font: normal 18px/100% "Obi-bold", Arial;
+	color: #fff;
+	text-align: center;
+}
+.prd_box__item .sale_info {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	display: block;
+	width: 72px;
+	height: 72px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #DF001B;
+	font: normal 25px/72px "Obi-bold", Arial;
+	color: #fff;
+	text-align: center;
+}
+.prd_box__item .btn-buy {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	outline: none;
+	display: block;
+	width: 115px;
+	height: 34px;
+	padding: 0 15px 0 0;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background: #ff7a40 url(http://www.obi.ru/ru/images/bs/2015/11/ico-btn-buy_arr.png) right center no-repeat;
+	font: normal 20px/34px "Obi-bold", Arial;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+.prd_box__item .btn-buy:hover {
+	background-color: #ff570d;
+}
+
+/* Black style */
+.prd_box__item--black {
+	background-color: #ccc;
+}
+.prd_box__item--black .txt h3 {color: #333;}
+.prd_box__item--black .txt p {color: #333;}
+.prd_box__item--black .info {color: #333;}
+.prd_box__item--black .info.info-white {color: #fff;}
+.prd_box__item--3x {
+	width: 33.3333333333%;
+	min-height: 430px;
+}
+.prd_box__item--full {
+	width: 100%;
+	min-height: 330px;
+}
+.prd_box__item--3x .txt {
+	right: 30px;
+	max-width: inherit;
+}
+.prd_box__item--full .txt {
+	max-width: 550px;
+}
+
+.bt_txt {
+	margin: 0 0 25px 0;
+}
+
+.bt_txt p {
+	font: normal 13px/130% "Arial";
+	color: #999;
+}
+
+@media (max-width: 1170px) {
+	.scope_sale__item {
+		padding: 0 15px;
+	}
+	.scope_sale__item .thumb .info {
+		font-size: 13px;
+	}
+	.scope_sale__item .prd_info p {
+		font-size: 12px;
+	}
+	/* -- */
+	.prd_box__item-in {
+		min-height: 440px;
+	}
+	.prd_box__item--full .prd_box__item-in {
+		min-height: 330px;
+	}
+	.prd_box__item .txt {
+		top: 20px;
+		left: 20px;
+	}
+	.prd_box__item .info {
+		bottom: 15px;
+		left: 20px;
+	}
+	.prd_box__item .btn-buy {
+		right: 20px;
+		bottom: 20px;
+	}
+}
+@media (max-width: 992px) {
+	.scope_sale {
+		margin-top: 110px;
+	}
+	.scope_sale:after {
+		top: -215px;
+		right: 30px;
+		margin: auto;
+	}
+	/* --- */
+	.scope_sale__item {
+		float: none;
+		width: 100%;
+		max-width: 450px;
+		margin: 0 auto 75px auto;
+	}
+	/* --- */
+	.prd_box__item {
+		overflow: visible;
+		float: none;
+		width: 100%;
+	}
+	.prd_box__item-in {
+		position: relative;
+		width: 100%;
+		max-width: 450px;
+		margin: 0 auto;
+	}
+	.prd_box__item .info {
+		font-size: 11px;
+	}
+
+	.prd_box__item--full .txt {
+		max-width: 320px;
+	}
+
+	.prd_box__item--full .txt br {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.scope_sale {
+		padding-top: 35px;
+	}
+	.scope_sale h3 {
+		font-size: 35px;
+	}
+	.scope_sale p {
+		font-size: 13px;
+	}
+	.prd_box__item .info {
+		bottom: 10px;
+		left: 10px;
+		
+		max-width: 180px;
+	}
+	
+	.prd_box__item .info br {
+		display: none;
+	}
+
+	.prd_box__item .txt {
+		top: 10px;
+		right: 40px;
+		left: 10px;
+	}
+	
+	.prd_box__item .txt p br {display: none;}
+
+	.prd_box__item .sale_info {
+		top: 10px;
+		right: 10px;
+		width: 45px;
+		height: 45px;
+		font: normal 18px/45px "Obi-bold", Arial;
+	}
+	.prd_box__item .btn-buy {
+		right: 10px;
+		bottom: 10px;
+	}
+	.prd_box__item .btn-buy.btn-watch {
+		width: 90px !important;
+		font: normal 18px/35px "Obi-bold", Arial;
+		background-image: none;
+		padding: 0px;
+	}
+	
+	.prd_box__item-hrs .prd_box__item-in {
+		min-height: 480px;
+	}
+
+	.prd_img.zatirka {
+		right: 40px !important;
+		bottom: 54px !important;
+		top: 137px;
+		left: 40px;
+	}
+	.prd_img.zatirka .gift_info {
+		top: -5px;
+		left: -14px;
+	}
+	.prd_img.zatirka img {
+		width: 100%;
+	}
+	.prd_box__item.linoleum_container {
+		background: #FFF url("http://www.obi.ru/ru/images/bs/2015/11/img-linoleum-m.png") 50% 90% no-repeat;
+		background-size: 70% ;
+	}
+	.prd_img.linoleum img {
+		visibility: hidden;
+	}
+
+	.prd_box__item .prd_img img {
+		max-width: 280px;
+		height: auto;
+	}
+
+	.bt_txt {
+		margin-right: 35px;
+		margin-left: 35px;
+		
+		text-align: center;
+	}
+}
+/* Clearfix */
+.cf:after {
+	visibility: hidden;
+	display: block;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .cf {zoom: 1;}
+*:first-child+html .cf {zoom: 1;}
+</style>
+
+<div class="container">
+
+
+<div class="scope_sale">
+	<h3>Вместе выгодно</h3>
+	<p>Подарки, скидки и другие выгодные предложения*</p>
+</div><!--.scope_sale-->
+
+<div class="prd_boxes cf">
+
+	<div class="prd_box__item prd_box__item--black prd_box__item--full" style="background: #e4c4a4 url(images/bg-prd1.jpg) center top no-repeat;">
+		<div class="prd_box__item-in">
+
+			<div class="sale_info">-15%</div>
+
+			<div class="txt">
+				<h3>Скидка на клей 15%</h3>
+				<p>При покупке линолеума Sinteros Eruption Venezia 2,<br> Solo Andente 2 ширина 2м, Синтерос Спринт Baden 3 ширина 3м<br> или Tarkett Idyl Nova Atlanta 1 ширина 3м от 20м2<br> скидка на клей 15%</p>
+			</div><!--.txt-->
+
+			<div class="info">Срок действия акции с 12.10 по 14.11.2015</div>
+
+			<a href="http://www.obi.ru/decom/campaign/ms_set_linoleum_sinteros_solo_tarkett" class="btn-buy">Смотреть</a>
+
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x prd_box__item--black" style="background-color: #eeece6;">
+		<div class="prd_box__item-in">
+
+			<div class="prd_img" style="right: 70px; bottom: 90px;">
+				<img src="images/img-prd1.png" alt="#">
+
+				<div class="gift_info" style="top: -13px; right: 0;">+ Подарок</div>
+			</div><!--.prd_img-->
+
+			<div class="txt">
+				<h3>Шпаклевка<br> в подарок</h3>
+				<p>Купите 5 мешков штукатурки Ротбанд 25 кг и получите КНАУФ Ротбанд Паста Профи 5 кг в подарок</p>
+			</div><!--.txt-->
+
+			<div class="info">Срок действия акции с 24.09.15<br>по 15.11.15. Акция проходит только<br> в Краснодаре</div>
+
+			<a href="http://www.obi.ru/decom/product/Штукатурка_гипсовая_универсальная_Knauf__-_Ротбанд_25_кг/3000320" class="btn-buy">Смотреть</a>
+
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x prd_box__item--black" style="background-color: #e6dfd1;">
+		<div class="prd_box__item-in">
+
+			<div class="prd_img" style="right: 80px; bottom: 60px;">
+				<img src="images/img-prd2.png" alt="#">
+
+				<div class="gift_info" style="top: 20px; right: 0;">+ Подарок</div>
+			</div><!--.prd_img-->
+
+			<div class="txt">
+				<h3>Затирка в подарок</h3>
+				<p>При покупке 4 упаковок плитки Керамин Сиерра из пяти различных коллекций вы получаете 1 упаковку затирки в подарок</p>
+			</div><!--.txt-->
+
+			<div class="info">Срок действия акции<br> с 19.10 по 30.11.15</div>
+			
+			<a href="http://www.obi.ru/decom/product/Плитка_Керамин_Сиерра_настенная_бежевая_20_х_50_см/3626108" class="btn-buy">Смотреть</a>
+
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x prd_box__item--black" style="background-color: #d3cec0;">
+		<div class="prd_box__item-in">
+
+			<div class="prd_img" style="right: 60px; bottom: 60px;">
+				<img src="images/img-prd3.png" alt="#">
+
+				<div class="gift_info" style="top: 15px; right: 0px;">+ Подарок</div>
+			</div><!--.prd_img-->
+
+			<div class="txt">
+				<h3>Клей в подарок</h3>
+				<p>Купите 5 рулонов обоев вспененный винил Victoria Stenova Дуги или компакт-винил Victoria Stenova Cherry Blossom и получите клей обойный клей в подарок</p>
+			</div><!--.txt-->
+
+			<div class="info">Срок действия акции<br> с 1.11 по 30.11.15</div>
+
+			<a href="http://www.obi.ru/decom/category/Всё_для_дома/Обои/Декоративные_обои/1267" class="btn-buy">Смотреть</a>
+
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--black prd_box__item--full" style="background: #c5b9a7 url(images/bg-prd4.jpg) right top no-repeat;">
+		<div class="prd_box__item-in">
+
+			<div class="txt">
+				<h3>Акция 15+2</h3>
+				<p>За каждые 15 упаковок ламината Megafloor Венге Кибото (2.48 кв.м), Megafloor Арденнский дуб (1.98 кв.м), Megafloor Альпийская лиственница серая (1.98 кв.м), Megafloor Ясень Сатакунта натуральный (1.98 кв.м) или OBI Робин Вуд светлый (1.39 кв.м) 2 упаковки ламината в подарок</p>
+			</div><!--.txt-->
+
+			<div class="info">Срок действия акции с 1.11 по 30.11.2015</div>
+
+			<a href="http://www.obi.ru/decom/product/Ламинат_Megafloor_Арденнский_дуб_в_упаковке_1.98_кв._м/3734753" class="btn-buy">Смотреть</a>
+
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+	
+	<div class="prd_box__item  prd_box__item-hrs" style="background-color: #0084ab;">
+		<div class="prd_box__item-in">
+
+			<div class="prd_img" style="right: 70px; bottom: 70px;">
+				<img src="images/img-prd5.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="txt">
+				<h3>Акция 5+1</h3>
+				<p>За каждые 5 упаковок пола<br> наливного Easy Boden (25кг)<br> 1 упаковка в подарок</p>
+			</div><!--.txt-->
+
+			<div class="info">Срок действия акции с 1.11 по 30.11.15. Акция проходит только<br>
+в Екатеринбурге, Казани, Омске, Сургуте.</div>
+
+			<a href="http://www.obi.ru/decom/product/Ровнитель_для_пола_Bergauf_Easy_Boden_25_кг./3581428" class="btn-buy">Смотреть</a>
+
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item-hrs" style="background-color: #3faccc;">
+		<div class="prd_box__item-in">
+
+			<div class="prd_img" style="right: 60px; bottom: 70px;">
+				<img src="images/img-prd6.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="txt">
+				<h3>Акция 5+1</h3>
+				<p>При покупке 5 упаковок стяжки<br> М-200 25кг + 1 упаковка<br> в подарок</p>
+			</div><!--.txt-->
+
+			<div class="info">Срок действия акции с 1.11 по 30.11.15. Акция проходит только<br>
+в Екатеринбурге, Казани, Омске, Сургуте.</div>
+			
+			<a href="http://www.obi.ru/decom/product/Стяжка_цементная_Brozex_М-200_25_кг/2650323" class="btn-buy">Смотреть</a>
+	
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x prd_box__item--black" style="background-color: #deba92;">
+		<div class="prd_box__item-in">
+
+			<div class="txt">
+				<h3>Скидка<br> на клей 20%</h3>
+				<p>При покупке трех пачек панелей<br> ПВХ линейки Мотиво скидка<br> на клей для обоев Quelyd 20%.</p>
+			</div><!--.txt-->
+
+			<div class="sale_info">-20%</div>
+
+			<div class="prd_img" style="right: 80px; bottom: 75px;">
+				<img src="images/img-prd7.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="info">Срок действия акции<br> с 1.11 по 30.11.2015</div>
+			
+			<a href="http://www.obi.ru/decom/product/Декоративная_панель_VOX_Digital_Print_ПВХ_2700_х_250_мм/3805355" class="btn-buy">Купить</a>
+		
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x prd_box__item--black" style="background-color: #eac9a7;">
+		<div class="prd_box__item-in">
+
+			<div class="txt">
+				<h3>Скидка на<br> подложку 15%!</h3>
+				<p>При покупке от 10 пачек ламината<br> Кроностар 33 класса – скидка<br> на подложку 15%</p>
+			</div><!--.txt-->
+
+			<div class="sale_info">-15%</div>
+
+			<div class="prd_img" style="right: 60px; bottom: 75px;">
+				<img src="images/img-prd8.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="info">Срок действия акции<br> с 1.11 по 30.11.2015</div>
+			
+			<a href="http://www.obi.ru/decom/product/Ламинат_Kronostar_Salzburg_дуб_рип_в_упаковке_1.86_кв._м/3417094" class="btn-buy">Купить</a>
+	
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x prd_box__item--black" style="background-color: #edd1b1;">
+		<div class="prd_box__item-in">
+			<div class="txt">
+				<h3>Скидка <br>на плинтус 15%!</h3>
+				<p>При покупке от 20 м² паркетной<br> доски Барлинек скидка на плинтус 15%</p>
+			</div><!--.txt-->
+
+			<div class="sale_info">-15%</div>
+
+			<div class="prd_img" style="right: 40px; bottom: 75px;">
+				<img src="images/img-prd9.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="info">Срок действия акции<br> с 1.11 по 30.11.2015</div>
+
+			<a href="http://www.obi.ru/decom/product/Доска_паркетная_Barlinek_Тали_в_упаковке_1.58_кв._м/2705879" class="btn-buy">Купить</a>
+
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+
+
+	<div class="prd_box__item prd_box__item--3x prd_box__item--black" style="background-color: #f9f4eb;">
+		<div class="prd_box__item-in">
+
+			<div class="txt">
+				<h3>Краска в подарок</h3>
+				<p>Купите 2 шт Краски Кухн/Ванн Dulux BW 2,5л или Kid’s room 5л и получите краску НОБ 3D в подарок</p>
+			</div><!--.txt-->
+
+			<div class="prd_img" style="right: 30px; bottom: 75px;">
+				<div class="gift_info" style="top: 10px; right: 10px;">+ Подарок</div>
+				<img src="images/img-prd10.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="info">Срок действия акции<br> с 4.11 по 4.12.15</div>
+			
+			<a href="http://www.obi.ru/decom/product/Краска_Dulux_для_кухни_и_ванной_белая_2.5_л/1028745" class="btn-buy">Смотреть</a>
+		
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x prd_box__item--black" style="background-color: #f0ede4;">
+		<div class="prd_box__item-in">
+
+			<div class="txt">
+				<h3>Акция 4+1</h3>
+				<p>За каждые 4 упаковки шпатлевки универсал Sheetrock 17л (28 кг) 1 упаковка в подарок</p>
+			</div><!--.txt-->
+
+			<div class="prd_img" style="right: 30px; bottom: 125px;">
+				<div class="gift_info" style="top: 10px; right: 20px;">+ Подарок</div>
+				<img src="images/img-prd11.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="info">Акция проходит только в Москве, Санкт-Петербурге,<br> Рязани,  Нижнем-Новгороде, Саратове, Волгограде, Краснодаре.<br>Срок действия акции<br> с 01.11 по 13.12.15</div>
+			
+			<a href="http://www.obi.ru/decom/product/Шпатлевка_универсальная_SHEETROCK_17_л_28_кг/1923911" class="btn-buy">Смотреть</a>
+	
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x prd_box__item--black" style="background-color: #e6e2db;">
+		<div class="prd_box__item-in">
+			<div class="txt">
+				<h3>Ёрш для унитаза<br> керамика в подарок</h3>
+				<p>Купите напольный унитаз  Керамин Гранд Люкс и получите белый ёрш для унитаза (керамика) в подарок</p>
+			</div><!--.txt-->
+
+			<div class="prd_img" style="right: 30px; bottom: 75px;">
+				<div class="gift_info" style="top: 0px; right: 10px;">+ Подарок</div>
+				<img src="images/img-prd12.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="info">Срок действия акции<br> с 1.11 по 15.12.15</div>
+
+			<a href="http://www.obi.ru/decom/product/Унитаз_напольный_Керамин_Гранд_Люкс/2364800" class="btn-buy">Смотреть</a>
+
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+
+	<div class="prd_box__item prd_box__item--3x" style="background-color: #1ea591;">
+		<div class="prd_box__item-in">
+
+			<div class="txt">
+				<h3>Электролопата<br> для уборки снега<br> в подарок</h3>
+				<p>Купите бензиновый культиватор CMI C-B-BH-87/55 и получите электролопату  Lux 1500w в подарок</p>
+			</div><!--.txt-->
+
+			<div class="prd_img" style="right: 30px; bottom: 70px;">
+				<div class="gift_info" style="top: 0px; right: 10px;">+ Подарок</div>
+				<img src="images/img-prd13.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="info">Срок действия акции<br> с 4.11 по 4.12.15</div>
+			
+			<a href="http://www.obi.ru/decom/product/Культиватор_бензиновый_CMI/3547833" class="btn-buy">Смотреть</a>
+		
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x" style="background-color: #00aa6a;">
+		<div class="prd_box__item-in">
+
+			<div class="txt">
+				<h3>Точилка для пил<br> в подарок</h3>
+				<p>Купите бензиновую пилу CMI C/B-KS и получите электрточилку для пил Lux 85w<br> в подарок</p>
+			</div><!--.txt-->
+
+			<div class="prd_img" style="right: 30px; bottom: 85px;">
+				<div class="gift_info" style="top: -30px; right: 0px;">+ Подарок</div>
+				<img src="images/img-prd14.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="info">Срок действия акции<br> с 1.11 по 13.12.15</div>
+			
+			<a href="http://www.obi.ru/decom/product/Пила_бензиновая_CMI_C/B-KS25,4-30/2654176" class="btn-buy">Смотреть</a>
+	
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+	<div class="prd_box__item prd_box__item--3x" style="background-color: #1fb187;">
+		<div class="prd_box__item-in">
+			<div class="txt">
+				<h3>Скидка<br> при покупке<br> комплекта</h3>
+				<p>Шланг душевой Iddis + Лейка душевая Berholm</p>
+			</div><!--.txt-->
+
+			<div class="sale_info">-15%</div>
+
+			<div class="prd_img" style="right: 110px; bottom: 60px;">
+				<img src="images/img-prd15.png" alt="#">
+			</div><!--.prd_img-->
+
+			<div class="info">Срок действия акции<br> с 16.10 по 31.12.15</div>
+
+			<a href="http://www.obi.ru/decom/campaign/ms_set_shower_hose_iddis_heads_berholm" class="btn-buy">Смотреть</a>
+
+		</div><!--.prd_box__item-in-->
+	</div><!--.prd_box__item-->
+
+
+</div><!--.prd_boxes-->
+
+<div class="bt_txt">
+	<p>* Данные акции действуют только при покупке в гипермаркете ОБИ</p>
+</div>
+
+
+</div><!--.container-->

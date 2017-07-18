@@ -1,0 +1,153 @@
+<!doctype html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pepsi — Приєднуйся до Чемпіонів!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
+<link rel="stylesheet" media="screen" href="style.css">
+<!--[if IE]><script src="js/html5.js"></script><![endif]-->
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/design.js"></script>
+</head>
+
+<body>
+
+<div class="nav">
+	<div class="nav__logo">
+		<a href="#"><img src="images/logo.png" alt="Pepsi"></a>
+	</div><!--.nav__logo-->
+
+	<div class="nav-btn">
+		<div class="nav-btn-wrap">
+			<div class="line1"></div><div class="line2"></div><div class="line3"></div>
+		</div>
+	</div>
+</div><!--.nav-->
+
+<div class="menu menu--big">
+	<ul class="list-unstyled">
+		<li><a href="epicentre.html">Акція в «Епіцентр»</a></li>
+		<li><a href="varus.html">Акція в «Варус»</a></li>
+		<li><a href="tavria.html">Акція в «Таврія В»</a></li>
+	</ul>
+</div><!--.menu-->
+
+<div class="container">
+
+	<div class="main_page main-bg">
+
+		<div class="action">АКЦІЯ</div>
+
+		<h2>Приєднуйся <span class="yellow">до Чемпіонів!</span></h2>
+
+		<div class="cf"></div>
+
+		<div class="main_page__txt">
+			<div class="vam">
+				<div class="vam__in"> 
+			 
+					<p>З 15.02.2016 до 15.04.2016 купуй Pepsi<br> та Lay’s разом у мережах партнерів акції.<br> Реєструй код через SMS на короткий<br> номер 3200 або на цьому сайті </p>
+
+					<h4>Виберіть мережу:</h4>
+
+					<ul class="list-unstyled">
+						<li><a href="varus.html"><img src="images/logo-varus.png" alt="Varus"></a></li>
+						<li><a href="epicentre.html"><img src="images/logo-epitsentr.png" alt="ЕпіЦентр"></a></li>
+						<li><a href="tavria.html"><img src="images/logo-tavriav.png" alt="Таврия В"></a></li>
+					</ul>
+
+					<h3>Вигравай<br> подарунки!</h3>
+
+				</div><!--.vam__in-->
+			</div><!--.vam-->		
+		</div><!--.main_page__txt-->
+
+	</div><!--.main_page-->
+ 
+</div><!--.container-->
+
+
+<!-- Modal Register code -->
+<div class="modal fade" id="reg_code" tabindex="-1" role="dialog" aria-labelledby="reg_code">
+  <div class="modal-dialog modal_box" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+
+		<div class="modal_box__head">
+      		<h3>Реєстрація</h3>
+      	</div><!--.modal_box__head-->
+        
+		<div class="modal_box__body">
+		
+			<form action="#">
+		        <div class="inp-group cf">
+		        	<div class="inp-line270">
+		        		<label for="reg_ch">ВВЕДІТЬ НОМЕР ЧЕКА</label>
+		        	</div>
+
+		        	<div class="inp-line-50"> 
+		        		<input type="text" name="#" class="inp-style inp-fw inp-mask-code" id="reg_ch">
+		        	</div>
+		        </div><!--.inp-group-->
+
+		        <div class="inp-group cf">
+		        	<div class="inp-line270">
+		        		<label for="reg_mob">НОМЕР МОБІЛЬНОГО</label>
+		        	</div>
+
+		        	<div class="inp-line-50"> 
+		        		<input type="text" name="#" class="inp-style inp-fw inp-mask-phone" id="reg_mob">
+		        	</div>
+		        </div><!--.inp-group-->
+				
+				<div class="btn-box">
+					<input type="submit" value="ГОТОВО!" class="btn-yellow">
+				</div>
+		    </form>    
+ 
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Register code -->
+
+
+
+<!-- Modal Info -->
+<div class="modal fade" id="info_popup" tabindex="-1" role="dialog" aria-labelledby="info_popup">
+  <div class="modal-dialog modal_box" role="document">
+    <div class="modal-content">
+		
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+ 
+		<div class="modal_box__body">
+		
+			<div class="modal_txt">
+				<p>Ваш код зареєстровано <br>
+				для участі в акції Pepsi+Lay’s! <br>
+				Деталі на <a href="#">pepsi.ua</a></p>
+			</div>   
+ 
+        </div><!--.modal_box__body-->
+ 
+    </div>
+  </div>
+</div>
+<!-- end Modal Info -->
+
+
+<script type="text/javascript">
+    $(window).load(function(){
+          //$('#reg_code').modal('show');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+
+
+@import url('http://www.obi.ru/skin/css/obi-fonts-cyrillic.css');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	outline: none;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {border-collapse: collapse;border-spacing: 0;}
+input[type="submit"], button {cursor: pointer;}
+input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner {padding: 0;border: 0;}
+
+html, body {
+
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.main_action {
+	overflow: hidden;
+	width: 100%;
+	height: 840px;
+
+	background: url(images/main_action.jpg) center center no-repeat;
+}
+
+.main_action__in {
+	position: relative;
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.ball_sq {
+	position: absolute;
+	top: 90px;
+	right: -75px;
+
+	display: block;
+	width: 600px;
+	height: 516px;
+}
+
+.main_action__txt {
+	max-width: 690px;
+}
+
+.main_action__title {
+	padding: 50px 0 0 0;
+}
+
+.main_action__title h2 {
+	margin: 0 0 15px 0;
+
+	font: normal 93px/100% "Obi-bold", Arial;
+	color: #fff;
+	letter-spacing: -4px;
+}
+
+.main_action__title p {
+	margin: 0 0 45px 0;
+
+	font: normal 30px/100% "Obi-regular", "Myriad Pro", Arial;
+	color: #fff;
+}
+
+.main_action__info {
+	display: block;
+	width: 700px;
+	margin: 0 0 45px 0;
+	padding: 123px 0 0 0;
+
+	background: url(images/img-steps.png) 0 0 no-repeat;
+}
+
+.main_action__info ul {
+	list-style: none;
+}
+
+.main_action__info ul li {
+	display: inline-block;
+	width: 215px;
+	margin: 0 15px 0 0;
+
+	font: normal 16px/140% "Obi-regular", "Myriad Pro", Arial;
+	color: #fff;
+
+	vertical-align: top;
+}
+
+.main_action__form {}
+
+.main_action__form p {
+	margin: 0 0 15px 0;
+
+	font: normal 16px/100% "Obi-regular", "Myriad Pro", Arial;
+	color: #fff;
+}
+
+.main_action__form-in {
+	margin: 0 0 50px 0;
+}
+
+.main_action__form input[type="text"] {
+	float: left;
+
+	outline: none;
+
+	display: block;
+	width: 240px;
+	height: 40px;
+	border: 0;
+	padding: 0 20px;
+
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+
+	font: normal 15px/150% "Obi-regular", "Myriad Pro", Arial;
+	color: #444;
+}
+.main_action__form input[type="submit"] {
+	outline: none;
+
+	float: left;
+
+	display: block;
+	width: 105px;
+	height: 40px;
+	border: 0;
+
+	background-color: #FF7B37;
+
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+
+	font: normal 18px/100% "Obi-bold", Arial;
+	color: #fff;
+
+	cursor: pointer;
+}
+.main_action__form input[type="submit"]:hover {
+	background-color: #ff570d;
+}
+
+.main_action__form .rules-btn {
+	display: inline-block;
+	padding: 10px 10px 10px 23px;
+
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+
+	background: #FF7B37 url(images/rules-arr.png) 10px center no-repeat;
+
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+
+	font: normal 18px/100% "Obi-bold", Arial;
+	color: #fff;
+	text-decoration: none;
+}
+
+.main_action__form .rules-btn:hover {
+	background-color: #ff570d;
+}
+
+
+/* Clearfix */
+.cf:after {
+	visibility: hidden;
+	display: block;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .cf {zoom: 1;}
+*:first-child+html .cf {zoom: 1;}
